@@ -1,7 +1,10 @@
-﻿using UnityEngine;
+﻿//
+// Emgen - Mesh generator class library
+//
+using UnityEngine;
 using System.Collections.Generic;
 
-namespace Furball
+namespace Emgen
 {
     public class VertexCache
     {
@@ -98,7 +101,10 @@ namespace Furball
 
         public void AddTriangle(Vector3 v1, Vector3 v2, Vector3 v3)
         {
-            triangles.Add(new IndexedTriangle(LookUpOrAddVertex(v1), LookUpOrAddVertex(v2), LookUpOrAddVertex(v3)));
+            var i1 = LookUpOrAddVertex(v1);
+            var i2 = LookUpOrAddVertex(v2);
+            var i3 = LookUpOrAddVertex(v3);
+            triangles.Add(new IndexedTriangle(i1, i2, i3));
         }
 
         #endregion
@@ -165,7 +171,7 @@ namespace Furball
 
         #endregion
 
-        #region Flat mesh builder
+        #region Flat Mesh Builder
 
         public Vector3[] MakeVertexArrayForFlatMesh()
         {

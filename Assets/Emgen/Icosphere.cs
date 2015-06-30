@@ -1,13 +1,17 @@
-﻿using UnityEngine;
+﻿//
+// Emgen - Mesh generator class library
+//
+using UnityEngine;
 using System.Collections.Generic;
 
-namespace Furball
+namespace Emgen
 {
     public class IcosphereBuilder
     {
         #region Internal Classes
 
-        // A midpoint table class which provides midpoints of edges without duplication.
+        // Midpoint table class
+        // Provides midpoints of edges without making duplication.
         class MidpointTable
         {
             VertexCache _vc;
@@ -29,7 +33,7 @@ namespace Furball
                 _table = new Dictionary<int, int>();
             }
 
-            // Get a midpoint with retrieving an existing vertex or adding a new one.
+            // Returns a midpoint with retrieving an existing vertex or adding a new one.
             public int GetMidpoint(int i1, int i2)
             {
                 var key = IndexPairToKey(i1, i2);
@@ -43,7 +47,7 @@ namespace Furball
 
         #endregion
 
-        #region Public members
+        #region Public Members
 
         public VertexCache vertexCache;
 
@@ -99,7 +103,7 @@ namespace Furball
 
         #endregion
 
-        #region Mesh manipulators
+        #region Mesh Operation Methods
 
         public void Subdivide()
         {
@@ -119,6 +123,7 @@ namespace Furball
 
             vertexCache = vc;
         }
+
         #endregion
     }
 }

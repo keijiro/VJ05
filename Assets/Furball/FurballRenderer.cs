@@ -1,17 +1,49 @@
 ﻿using UnityEngine;
 using System.Collections;
+using Emgen;
 
 namespace Furball
 {
+    [ExecuteInEditMode]
     public class FurballRenderer : MonoBehaviour
     {
-        Mesh _mesh;
+        [SerializeField, Range(0, 4)]
+        int _subdivision = 2;
 
         [SerializeField]
         Material _material;
 
-        Mesh BuildMesh(VertexCache vc)
+        Mesh _mesh;
+        bool _needsReset = true;
+
+        void ResetResources()
         {
+            if (_mesh) DestroyImmediate(_mesh);
+            BuildMesh();
+            _needsReset = false;
+        }
+
+        void Update()
+        {
+            if (_needsReset) ResetResources();
+            Graphics.DrawMesh(_mesh, transform.position, transform.rotation, _material, 0);
+        }
+
+        public void NotifyConfigChange()
+        {
+            _needsReset = true;
+        }
+
+        #region Mesh Builder
+
+        void BuildMesh()
+        {
+            IcosphereBuilder ib = new IcosphereBuilder();
+
+            for (var i = 0; i < _subdivision; i++) ib.Subdivide();
+
+            var vc = ib.vertexCache;
+
             var vertices = new Vector3[vc.triangles.Count * 12];
             var colors = new Color[vc.triangles.Count * 12];
             var offs = 0;
@@ -57,26 +89,17 @@ namespace Furball
             for (var i = 0; i < indices.Length; i++)
                 indices[i] = i;
 
-            var mesh = new Mesh();
-            mesh.vertices = vertices;
-            mesh.colors = colors;
-            mesh.SetIndices(indices, MeshTopology.Triangles, 0);
-            mesh.RecalculateNormals();
+            if (_mesh) Destroy(_mesh);
 
-            return mesh;
+            _mesh = new Mesh();
+            _mesh.hideFlags = HideFlags.DontSave;
+            _mesh.bounds = new Bounds(Vector3.zero, Vector3.one * 100);
+            _mesh.vertices = vertices;
+            _mesh.colors = colors;
+            _mesh.SetIndices(indices, MeshTopology.Triangles, 0);
+            _mesh.RecalculateNormals();
         }
 
-        void Start()
-        {
-            IcosphereBuilder ib = new IcosphereBuilder();
-            ib.Subdivide();
-            ib.Subdivide();
-            _mesh = BuildMesh(ib.vertexCache);
-        }
-
-        void Update()
-        {
-            Graphics.DrawMesh(_mesh, transform.position, transform.rotation, _material, 0);
-        }
+        #endregion
     }
 }

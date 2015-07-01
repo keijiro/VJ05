@@ -87,6 +87,107 @@ NavMeshSettings:
     cellSize: .166666672
     manualCellSize: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &385366393
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 385366395}
+  - 114: {fileID: 385366394}
+  - 114: {fileID: 385366396}
+  - 114: {fileID: 385366397}
+  m_Layer: 0
+  m_Name: Wall
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &385366394
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 385366393}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29cfb89969d804cadbeec71cd66d93f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _columns: 60
+  _rows: 30
+  _extent: {x: 20, y: 10}
+  _offset: {x: 0, y: 0}
+  _positionNoiseMode: 2
+  _positionNoiseAmplitude: .400000006
+  _positionNoiseFrequency: .400000006
+  _positionNoiseSpeed: .5
+  _rotationNoiseMode: 4
+  _rotationNoiseAmplitude: 80
+  _rotationNoiseFrequency: .360000014
+  _rotationNoiseSpeed: .400000006
+  _scaleNoiseMode: 1
+  _scaleNoiseAmplitude: 1
+  _scaleNoiseFrequency: .200000003
+  _scaleNoiseSpeed: .800000012
+  _shapes: []
+  _baseScale: {x: 1, y: 1, z: 1}
+  _minRandomScale: .800000012
+  _maxRandomScale: 1
+  _material: {fileID: 0}
+  _castShadows: 1
+  _receiveShadows: 1
+  _debug: 0
+  _defaultShape: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+  _defaultMaterial: {fileID: 2100000, guid: dddcdd0c49f184396b3fe5d5ba46b9ce, type: 2}
+  _kernelShader: {fileID: 4800000, guid: d7f9e4b36d4474781935eb3ae5ba30d3, type: 3}
+  _debugShader: {fileID: 4800000, guid: 6b02210009e584160bf24e085a6f4a6a, type: 3}
+--- !u!4 &385366395
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 385366393}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 6}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+--- !u!114 &385366396
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 385366393}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4578a0a68c3f346b5ac9cb1be539e62b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  yawAngle: 0
+  speed: 2
+--- !u!114 &385366397
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 385366393}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d637268abbbb5428e991dd9ec93136f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  positionFrequency: .200000003
+  rotationFrequency: .200000003
+  positionAmount: 1
+  rotationAmount: 30
+  positionComponents: {x: 1, y: 1, z: 1}
+  rotationComponents: {x: 1, y: 1, z: 0}
+  positionOctave: 3
+  rotationOctave: 3
 --- !u!1 &1095523581
 GameObject:
   m_ObjectHideFlags: 0
@@ -362,7 +463,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1428037880}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 801e272fe799a4b1285b38cce9afa88d, type: 3}
   m_Name: 
@@ -456,3 +557,71 @@ MonoBehaviour:
     m_PostInfinity: 2
   _ditherMode: 0
   shader: {fileID: 4800000, guid: dc9775b65c52747e69fc4c854c00d696, type: 3}
+--- !u!1 &1453941803
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1453941805}
+  - 114: {fileID: 1453941804}
+  m_Layer: 0
+  m_Name: Spray
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1453941804
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1453941803}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 051131338091a4b3d861d193e64fb704, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _maxParticles: 10000
+  _emitterCenter: {x: 0, y: 0, z: 0}
+  _emitterSize: {x: .400000006, y: .400000006, z: .400000006}
+  _throttle: 1
+  _minLife: 1
+  _maxLife: 2.5
+  _minSpeed: .5
+  _maxSpeed: 2.50000048
+  _direction: {x: 0, y: 0, z: 1}
+  _spread: 1
+  _minSpin: 272.1875
+  _maxSpin: 653.125
+  _noiseAmplitude: 1
+  _noiseFrequency: .699999988
+  _noiseSpeed: .600000024
+  _shapes:
+  - {fileID: 4300006, guid: d156dcf56f86f404393203fbed35c031, type: 3}
+  - {fileID: 4300000, guid: d156dcf56f86f404393203fbed35c031, type: 3}
+  - {fileID: 4300004, guid: d156dcf56f86f404393203fbed35c031, type: 3}
+  _minScale: .0764504224
+  _maxScale: .538593829
+  _material: {fileID: 0}
+  _castShadows: 0
+  _receiveShadows: 0
+  _randomSeed: 0
+  _debug: 0
+  _defaultMaterial: {fileID: 2100000, guid: e1aad33bf16194534a7c99e7c01a8249, type: 2}
+  _kernelShader: {fileID: 4800000, guid: 5e5e161a3708e40119404232637809fc, type: 3}
+  _debugShader: {fileID: 4800000, guid: ad2397ccf551046ecb4df814f027d430, type: 3}
+--- !u!4 &1453941805
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1453941803}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: -1.62920685e-07}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4

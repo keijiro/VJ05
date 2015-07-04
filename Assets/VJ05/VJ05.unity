@@ -204,7 +204,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1006391192
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -221,9 +221,9 @@ MonoBehaviour:
   _waveAlpha: 1
   _waveBeta: 1
   _cutoff: .400000006
-  _noiseSpeed: 3
-  _noiseFrequency: 2
   _noiseAmplitude: 9
+  _noiseFrequency: 2
+  _noiseSpeed: 3
   _material: {fileID: 2100000, guid: 91d6c48d5fc5d4edb98fdf6f0fce520e, type: 2}
   _receiveShadows: 1
   _shadowCastingMode: 1
@@ -274,7 +274,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1095523582
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -287,11 +287,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _subdivision: 3
-  _noiseFrequency: 2.13000011
   _noiseAmplitude: 3
-  _noisePowerScale: 2.5
+  _noiseExponent: 2.5
+  _noiseFrequency: 2.13000011
   _noiseSpeed: .100000001
   _material: {fileID: 2100000, guid: 6366653fc21554ef7b314d8220eadbc2, type: 2}
+  _receiveShadows: 1
+  _shadowCastingMode: 1
 --- !u!4 &1095523583
 Transform:
   m_ObjectHideFlags: 0

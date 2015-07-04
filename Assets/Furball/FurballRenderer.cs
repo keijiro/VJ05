@@ -1,7 +1,8 @@
 ﻿//
-// Geometric Furball Like Thing
+// Geometric furball like thing
 //
 using UnityEngine;
+using UnityEngine.Rendering;
 using Emgen;
 
 [ExecuteInEditMode]
@@ -9,43 +10,63 @@ public class FurballRenderer : MonoBehaviour
 {
     #region Public Properties
 
+    // Subdivision level
     [SerializeField, Range(0, 4)]
     int _subdivision = 2;
 
-    [SerializeField]
-    float _noiseFrequency = 1;
+    // Noise amplitude
+    [SerializeField, Header("Noise Parameters")]
+    float _noiseAmplitude = 3;
 
-    [SerializeField]
-    float _noiseAmplitude = 1;
+    public float noiseAmplitude {
+        get { return _noiseAmplitude; }
+        set { _noiseAmplitude = value; }
+    }
 
+    // Exponent of noise amplitude
     [SerializeField]
-    float _noisePowerScale = 1;
+    float _noiseExponent = 2.5f;
 
-    [SerializeField]
-    float _noiseSpeed = 0.1f;
+    public float noiseExponent {
+        get { return _noiseExponent; }
+        set { _noiseExponent = value; }
+    }
 
+    // Noise frequency
     [SerializeField]
+    float _noiseFrequency = 2;
+
+    public float noiseFrequency {
+        get { return _noiseFrequency; }
+        set { _noiseFrequency = value; }
+    }
+
+    // Noise speed
+    [SerializeField]
+    float _noiseSpeed = 3;
+
+    public float noiseSpeed {
+        get { return _noiseSpeed; }
+        set { _noiseSpeed = value; }
+    }
+
+    // Rendering settings
+    [SerializeField, Header("Rendering")]
     Material _material;
+
+    [SerializeField]
+    bool _receiveShadows;
+
+    [SerializeField]
+    ShadowCastingMode _shadowCastingMode;
 
     #endregion
 
     #region Private Members
 
     Mesh _mesh;
-    Vector3 _noisePosition;
-    bool _needsReset = true;
-
-    public void NotifyConfigChange()
-    {
-        _needsReset = true;
-    }
-
-    void ResetResources()
-    {
-        if (_mesh) DestroyImmediate(_mesh);
-        BuildMesh();
-        _needsReset = false;
-    }
+    int _subdivided = -1;
+    Vector3 _noiseOffset;
 
     #endregion
 
@@ -53,26 +74,31 @@ public class FurballRenderer : MonoBehaviour
 
     void Update()
     {
-        if (_needsReset) ResetResources();
+        if (_subdivided != _subdivision) RebuildMesh();
 
         var noiseDir = new Vector3(1, 0.3f, -0.5f).normalized;
-        _noisePosition += noiseDir * (_noiseSpeed * Time.deltaTime);
+        _noiseOffset += noiseDir * (Time.deltaTime * _noiseSpeed);
 
         var props = new MaterialPropertyBlock();
-        props.SetVector("_NoiseOffset", _noisePosition);
+        props.SetVector("_NoiseOffset", _noiseOffset);
         props.SetFloat("_NoiseFrequency", _noiseFrequency);
         props.SetFloat("_NoiseAmplitude", _noiseAmplitude);
-        props.SetFloat("_NoisePower", _noisePowerScale);
+        props.SetFloat("_NoiseExponent", _noiseExponent);
 
-        Graphics.DrawMesh(_mesh, transform.position, transform.rotation, _material, 0, null, 0, props);
+        Graphics.DrawMesh(
+            _mesh, transform.position, transform.rotation,
+            _material, 0, null, 0, props,
+            _shadowCastingMode, _receiveShadows);
     }
 
     #endregion
 
     #region Mesh Builder
 
-    void BuildMesh()
+    void RebuildMesh()
     {
+        if (_mesh) DestroyImmediate(_mesh);
+
         // Make an icosphere.
         IcosphereBuilder ib = new IcosphereBuilder();
         for (var i = 0; i < _subdivision; i++) ib.Subdivide();

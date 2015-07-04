@@ -29,12 +29,12 @@
         float3 _NoiseOffset;
         float _NoiseFrequency;
         float _NoiseAmplitude;
-        float _NoisePower;
+        float _NoiseExponent;
 
         void vert(inout appdata_full v)
         {
             float n = cnoise(mul(_Object2World, v.color) * _NoiseFrequency + _NoiseOffset);
-            v.vertex.xyz *= 1 + pow(abs(n), _NoisePower) * _NoiseAmplitude;
+            v.vertex.xyz *= 1 + pow(abs(n), _NoiseExponent) * _NoiseAmplitude;
             //v.vertex.xyz *= 1 + n * _NoiseAmplitude;
         }
 

@@ -1,4 +1,7 @@
-﻿using UnityEngine;
+﻿//
+// Deforming shell like thing
+//
+using UnityEngine;
 using UnityEngine.Rendering;
 using Emgen;
 
@@ -47,13 +50,13 @@ public class ShellRenderer : MonoBehaviour
         set { _cutoff = value; }
     }
 
-    // Noise speed
+    // Noise amplitude
     [SerializeField, Header("Noise Parameters")]
-    float _noiseSpeed = 3;
+    float _noiseAmplitude = 5;
 
-    public float noiseSpeed {
-        get { return _noiseSpeed; }
-        set { _noiseSpeed = value; }
+    public float noiseAmplitude {
+        get { return _noiseAmplitude; }
+        set { _noiseAmplitude = value; }
     }
 
     // Noise frequency
@@ -65,13 +68,13 @@ public class ShellRenderer : MonoBehaviour
         set { _noiseFrequency = value; }
     }
 
-    // Noise amplitude
+    // Noise speed
     [SerializeField]
-    float _noiseAmplitude = 5;
+    float _noiseSpeed = 3;
 
-    public float noiseAmplitude {
-        get { return _noiseAmplitude; }
-        set { _noiseAmplitude = value; }
+    public float noiseSpeed {
+        get { return _noiseSpeed; }
+        set { _noiseSpeed = value; }
     }
 
     // Rendering settings

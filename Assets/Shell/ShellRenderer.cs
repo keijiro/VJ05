@@ -11,6 +11,33 @@ public class ShellRenderer : MonoBehaviour
     int _subdivision = 2;
 
     [SerializeField]
+    float _waveSpeed = 8;
+
+    [SerializeField]
+    Vector3 _alpha = new Vector3(3.3f, 1.3f, 1);
+
+    [SerializeField]
+    Vector3 _beta = new Vector3(0.028f, 0.047f, 0.032f);
+
+    [SerializeField]
+    Vector3 _gamma = new Vector3(1, 5.789f, 5.2f);
+
+    [SerializeField, Range(0, 1)]
+    float _cutoff = 0.5f;
+
+    [SerializeField]
+    float _noiseSpeed = 3;
+
+    [SerializeField]
+    float _noiseFrequency = 3;
+
+    [SerializeField]
+    float _noiseAmplitude = 5;
+
+    [SerializeField]
+    float _noiseExponent = 2;
+
+    [SerializeField]
     Material _material;
 
     [SerializeField]
@@ -25,6 +52,9 @@ public class ShellRenderer : MonoBehaviour
 
     Mesh _mesh;
     bool _needsReset = true;
+
+    float _waveTime;
+    Vector3 _noiseOffset;
 
     public void NotifyConfigChange()
     {
@@ -46,9 +76,28 @@ public class ShellRenderer : MonoBehaviour
     {
         if (_needsReset) ResetResources();
 
+        var noiseDir = new Vector3(1, 0.5f, 0.2f).normalized;
+
+        _waveTime += Time.deltaTime * _waveSpeed;
+        _noiseOffset += noiseDir * (Time.deltaTime * _noiseSpeed);
+
+        var props = new MaterialPropertyBlock();
+
+        props.SetFloat("_Cutoff", _cutoff);
+
+        props.SetFloat("_WTime", _waveTime);
+        props.SetVector("_WParams1", _alpha);
+        props.SetVector("_WParams2", _beta);
+        props.SetVector("_WParams3", _gamma);
+
+        props.SetVector("_NOffset", _noiseOffset);
+
+        var np = new Vector3(_noiseFrequency, _noiseAmplitude, _noiseExponent);
+        props.SetVector("_NParams", np);
+
         Graphics.DrawMesh(
             _mesh, transform.position, transform.rotation,
-            _material, 0, null, 0, null,
+            _material, 0, null, 0, props,
             _shadowCastingMode, _receiveShadows);
     }
 
@@ -58,9 +107,10 @@ public class ShellRenderer : MonoBehaviour
 
     void BuildMesh()
     {
-        // The Shell vertex shader needs position of three vertices to calculate
-        // the normal vector. To provide these information, it uses normal and
-        // tangent attributes for storing the 2nd and 3rd vertex position.
+        // The Shell vertex shader needs positions of three vertices in a triangle
+        // to calculate the normal vector. To provide these information, it uses
+        // not only the position attribute but also the normal and tangent attributes
+        // to store the 2nd and 3rd vertex position.
 
         IcosphereBuilder ib = new IcosphereBuilder();
 

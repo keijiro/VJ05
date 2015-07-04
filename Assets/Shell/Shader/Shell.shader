@@ -2,43 +2,37 @@
 {
     Properties
     {
-        _Color      ("Base Color", Color)      = (1,1,1,1)
+        _Color ("Base Color", Color) = (1,1,1,1)
         _Glossiness ("Smoothness", Range(0,1)) = 0.5
-        _Metallic   ("Metallic",   Range(0,1)) = 0.0
-
-        [HDR] _Emission ("Emission", Color) = (1,1,1)
-
-        _Cutoff ("Cutoff", Range(0,1)) = 0.5
-
-        _Speed ("Speed", float)  = 8
-        _Alpha ("Alpha", Vector) = (10, 8, 4, 0)
-        _Beta  ("Beta",  Vector) = (0.028, 0.047, 0.032, 0)
-        _Gamma ("Gamma", Vector) = (1, 5.789, 5.2, 0)
+        _Metallic ("Metallic", Range(0,1)) = 0.0
+        [HDR] _Emission ("Emission", Color) = (1,1,1,1)
     }
 
     CGINCLUDE
 
     #include "ClassicNoise3D.cginc"
 
-    float _Speed;
-    float3 _Alpha;
-    float3 _Beta;
-    float3 _Gamma;
+    float _WTime;
+    float3 _WParams1;
+    float3 _WParams2;
+    float3 _WParams3;
 
-    float wave(float3 p)
+    float3 _NOffset;
+    float3 _NParams; // frequency, amplitude, exponent
+
+    float wave_alpha(float3 p)
     {
-        ///return 1;
-        float t = _Time.y * _Speed;
-        float a = sin(p.x * _Alpha.x * sin(t * _Beta.x)  * _Gamma.x +
-                  sin(p.y * _Alpha.y * sin(t * _Beta.y)) * _Gamma.y +
-                  sin(p.z * _Alpha.z * sin(t * _Beta.z)) * _Gamma.z + t);
+        float a =
+            sin(p.x * _WParams1.x * sin(_WTime * _WParams2.x)  * _WParams3.x +
+            sin(p.y * _WParams1.y * sin(_WTime * _WParams2.y)) * _WParams3.y +
+            sin(p.z * _WParams1.z * sin(_WTime * _WParams2.z)) * _WParams3.z + _WTime);
         return (a + 1) / 2;
     }
 
-    float3 displacement(float3 vp)
+    float3 noise_disp(float3 vp)
     {
-        float n = cnoise(vp * 2 + float3(1, 1, 0) * _Time.x * 15);
-        return vp * (1.0 + pow(abs(n), 3) * 5);
+        float n = cnoise(vp * _NParams.x + _NOffset);
+        return vp * (1.0 + pow(abs(n), _NParams.z) * _NParams.y);
     }
 
     ENDCG
@@ -50,7 +44,7 @@
         // front-face
 
         Cull Back
-        
+
         CGPROGRAM
 
         #pragma surface surf Standard vertex:vert alphatest:_Cutoff
@@ -67,9 +61,9 @@
 
         void vert(inout appdata_full v)
         {
-            float3 v1 = displacement(v.vertex.xyz);
-            float3 v2 = displacement(v.normal);
-            float3 v3 = displacement(v.tangent.xyz);
+            float3 v1 = noise_disp(v.vertex.xyz);
+            float3 v2 = noise_disp(v.normal);
+            float3 v3 = noise_disp(v.tangent.xyz);
             v.vertex.xyz = v1;
             v.normal = normalize(cross(v2 - v1, v3 - v1));
         }
@@ -80,7 +74,7 @@
             o.Metallic = _Metallic;
             o.Smoothness = _Glossiness;
             o.Emission = _Emission;
-            o.Alpha = wave(IN.worldPos);
+            o.Alpha = wave_alpha(IN.worldPos);
         }
 
         ENDCG
@@ -88,7 +82,7 @@
         // back-face
 
         Cull Front
-        
+
         CGPROGRAM
 
         #pragma surface surf Standard vertex:vert alphatest:_Cutoff
@@ -101,24 +95,22 @@
         half _Glossiness;
         half _Metallic;
         half4 _Color;
-        half4 _Emission;
 
         void vert(inout appdata_full v)
         {
-            float3 v1 = displacement(v.vertex.xyz);
-            float3 v2 = displacement(v.normal);
-            float3 v3 = displacement(v.tangent.xyz);
+            float3 v1 = noise_disp(v.vertex.xyz);
+            float3 v2 = noise_disp(v.normal);
+            float3 v3 = noise_disp(v.tangent.xyz);
             v.vertex.xyz = v1;
             v.normal = -normalize(cross(v2 - v1, v3 - v1));
         }
 
         void surf(Input IN, inout SurfaceOutputStandard o)
         {
-            o.Normal = float3(0, 0, -1);
             o.Albedo = _Color.rgb;
             o.Metallic = _Metallic;
             o.Smoothness = _Glossiness;
-            o.Alpha = wave(IN.worldPos);
+            o.Alpha = wave_alpha(IN.worldPos);
         }
 
         ENDCG

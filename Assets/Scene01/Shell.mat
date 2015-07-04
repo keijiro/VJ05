@@ -38,14 +38,14 @@ Material:
           m_Offset: {x: 0, y: 0}
       data:
         first:
-          name: _ParallaxMap
+          name: _OcclusionMap
         second:
           m_Texture: {fileID: 0}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
       data:
         first:
-          name: _OcclusionMap
+          name: _ParallaxMap
         second:
           m_Texture: {fileID: 0}
           m_Scale: {x: 1, y: 1}
@@ -93,16 +93,24 @@ Material:
         second: .5
       data:
         first:
+          name: _Metallic
+        second: .800000012
+      data:
+        first:
+          name: _Glossiness
+        second: .850000024
+      data:
+        first:
+          name: _Speed
+        second: 12
+      data:
+        first:
           name: _Parallax
         second: .0199999996
       data:
         first:
           name: _ZWrite
         second: 1
-      data:
-        first:
-          name: _Glossiness
-        second: .850000024
       data:
         first:
           name: _BumpScale
@@ -123,14 +131,6 @@ Material:
         first:
           name: _Mode
         second: 0
-      data:
-        first:
-          name: _Metallic
-        second: .800000012
-      data:
-        first:
-          name: _Speed
-        second: 12
     m_Colors:
       data:
         first:
@@ -142,12 +142,12 @@ Material:
         second: {r: 1, g: 1, b: 1, a: 1}
       data:
         first:
-          name: _Emission
-        second: {r: 0, g: 0, b: 0, a: 1}
+          name: _Alpha
+        second: {r: 2.46000004, g: 3.5, b: 1.91999996, a: 0}
       data:
         first:
-          name: _Alpha
-        second: {r: 3, g: 3.5, b: 4, a: 0}
+          name: _Emission
+        second: {r: 0, g: 0, b: 0, a: 1}
       data:
         first:
           name: _Beta
@@ -155,4 +155,4 @@ Material:
       data:
         first:
           name: _Gamma
-        second: {r: 1.29999995, g: 5.78900003, b: 5.19999981, a: 0}
+        second: {r: 1.99000001, g: 2.53999996, b: 3.99000001, a: 0}

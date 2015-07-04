@@ -218,6 +218,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _subdivision: 3
   _material: {fileID: 2100000, guid: 91d6c48d5fc5d4edb98fdf6f0fce520e, type: 2}
+  _receiveShadows: 1
+  _shadowCastingMode: 2
 --- !u!4 &1006391193
 Transform:
   m_ObjectHideFlags: 0

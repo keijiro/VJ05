@@ -18,6 +18,8 @@
 
     CGINCLUDE
 
+    #include "ClassicNoise3D.cginc"
+
     float _Speed;
     float3 _Alpha;
     float3 _Beta;
@@ -25,11 +27,18 @@
 
     float wave(float3 p)
     {
+        ///return 1;
         float t = _Time.y * _Speed;
         float a = sin(p.x * _Alpha.x * sin(t * _Beta.x)  * _Gamma.x +
                   sin(p.y * _Alpha.y * sin(t * _Beta.y)) * _Gamma.y +
                   sin(p.z * _Alpha.z * sin(t * _Beta.z)) * _Gamma.z + t);
         return (a + 1) / 2;
+    }
+
+    float3 displacement(float3 vp)
+    {
+        float n = cnoise(vp * 2 + float3(1, 1, 0) * _Time.x * 15);
+        return vp * (1.0 + pow(abs(n), 3) * 5);
     }
 
     ENDCG
@@ -44,7 +53,7 @@
         
         CGPROGRAM
 
-        #pragma surface surf Standard alphatest:_Cutoff
+        #pragma surface surf Standard vertex:vert alphatest:_Cutoff
         #pragma target 3.0
 
         struct Input {
@@ -55,6 +64,15 @@
         half _Metallic;
         half4 _Color;
         half4 _Emission;
+
+        void vert(inout appdata_full v)
+        {
+            float3 v1 = displacement(v.vertex.xyz);
+            float3 v2 = displacement(v.normal);
+            float3 v3 = displacement(v.tangent.xyz);
+            v.vertex.xyz = v1;
+            v.normal = normalize(cross(v2 - v1, v3 - v1));
+        }
 
         void surf(Input IN, inout SurfaceOutputStandard o)
         {
@@ -73,7 +91,7 @@
         
         CGPROGRAM
 
-        #pragma surface surf Standard alphatest:_Cutoff
+        #pragma surface surf Standard vertex:vert alphatest:_Cutoff
         #pragma target 3.0
 
         struct Input {
@@ -84,6 +102,15 @@
         half _Metallic;
         half4 _Color;
         half4 _Emission;
+
+        void vert(inout appdata_full v)
+        {
+            float3 v1 = displacement(v.vertex.xyz);
+            float3 v2 = displacement(v.normal);
+            float3 v3 = displacement(v.tangent.xyz);
+            v.vertex.xyz = v1;
+            v.normal = -normalize(cross(v2 - v1, v3 - v1));
+        }
 
         void surf(Input IN, inout SurfaceOutputStandard o)
         {

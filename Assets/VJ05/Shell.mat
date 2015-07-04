@@ -38,14 +38,14 @@ Material:
           m_Offset: {x: 0, y: 0}
       data:
         first:
-          name: _OcclusionMap
+          name: _ParallaxMap
         second:
           m_Texture: {fileID: 0}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
       data:
         first:
-          name: _ParallaxMap
+          name: _OcclusionMap
         second:
           m_Texture: {fileID: 0}
           m_Scale: {x: 1, y: 1}
@@ -93,16 +93,12 @@ Material:
         second: .5
       data:
         first:
-          name: _Metallic
+          name: _Metallic1
         second: .800000012
       data:
         first:
-          name: _Glossiness
-        second: .850000024
-      data:
-        first:
-          name: _Speed
-        second: 12
+          name: _Metallic2
+        second: .00800000038
       data:
         first:
           name: _Parallax
@@ -111,6 +107,10 @@ Material:
         first:
           name: _ZWrite
         second: 1
+      data:
+        first:
+          name: _Glossiness
+        second: .850000024
       data:
         first:
           name: _BumpScale
@@ -131,6 +131,22 @@ Material:
         first:
           name: _Mode
         second: 0
+      data:
+        first:
+          name: _Metallic
+        second: .800000012
+      data:
+        first:
+          name: _Speed
+        second: 12
+      data:
+        first:
+          name: _Glossiness1
+        second: .850000024
+      data:
+        first:
+          name: _Glossiness2
+        second: .200000003
     m_Colors:
       data:
         first:
@@ -140,6 +156,10 @@ Material:
         first:
           name: _Color
         second: {r: 1, g: 1, b: 1, a: 1}
+      data:
+        first:
+          name: _Color2
+        second: {r: .0514705777, g: .0514705777, b: .0514705777, a: 1}
       data:
         first:
           name: _Alpha
@@ -156,3 +176,7 @@ Material:
         first:
           name: _Gamma
         second: {r: 1.99000001, g: 2.53999996, b: 3.99000001, a: 0}
+      data:
+        first:
+          name: _Color1
+        second: {r: 1, g: 1, b: 1, a: 1}

@@ -2,10 +2,13 @@
 {
     Properties
     {
-        _Color ("Base Color", Color) = (1,1,1,1)
-        _Glossiness ("Smoothness", Range(0,1)) = 0.5
-        _Metallic ("Metallic", Range(0,1)) = 0.0
-        [HDR] _Emission ("Emission", Color) = (1,1,1,1)
+        _Color1 ("Albedo (front)", Color) = (1,1,1,1)
+        _Color2 ("Albedo (back)", Color) = (1,1,1,1)
+        _Glossiness1 ("Smoothness (front)", Range(0,1)) = 0.5
+        _Glossiness2 ("Smoothness (back)", Range(0,1)) = 0.5
+        _Metallic1 ("Metallic (front)", Range(0,1)) = 0.0
+        _Metallic2 ("Metallic (back)", Range(0,1)) = 0.0
+        [HDR] _Emission ("Emission (front)", Color) = (1,1,1,1)
     }
 
     CGINCLUDE
@@ -54,9 +57,9 @@
             float3 worldPos;
         };
 
-        half _Glossiness;
-        half _Metallic;
-        half4 _Color;
+        half4 _Color1;
+        half _Glossiness1;
+        half _Metallic1;
         half4 _Emission;
 
         void vert(inout appdata_full v)
@@ -70,9 +73,9 @@
 
         void surf(Input IN, inout SurfaceOutputStandard o)
         {
-            o.Albedo = _Color.rgb;
-            o.Metallic = _Metallic;
-            o.Smoothness = _Glossiness;
+            o.Albedo = _Color1.rgb;
+            o.Metallic = _Metallic1;
+            o.Smoothness = _Glossiness1;
             o.Emission = _Emission;
             o.Alpha = wave_alpha(IN.worldPos);
         }
@@ -92,9 +95,9 @@
             float3 worldPos;
         };
 
-        half _Glossiness;
-        half _Metallic;
-        half4 _Color;
+        half4 _Color2;
+        half _Glossiness2;
+        half _Metallic2;
 
         void vert(inout appdata_full v)
         {
@@ -107,9 +110,9 @@
 
         void surf(Input IN, inout SurfaceOutputStandard o)
         {
-            o.Albedo = _Color.rgb;
-            o.Metallic = _Metallic;
-            o.Smoothness = _Glossiness;
+            o.Albedo = _Color2.rgb;
+            o.Metallic = _Metallic2;
+            o.Smoothness = _Glossiness2;
             o.Alpha = wave_alpha(IN.worldPos);
         }
 

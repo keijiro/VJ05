@@ -7,31 +7,75 @@ public class ShellRenderer : MonoBehaviour
 {
     #region Public Properties
 
+    // Subdivision level
     [SerializeField, Range(0, 4)]
     int _subdivision = 2;
 
-    [SerializeField]
+    // Wave speed
+    [SerializeField, Header("Wave Parameters")]
     float _waveSpeed = 8;
 
+    public float waveSpeed {
+        get { return _waveSpeed; }
+        set { _waveSpeed = value; }
+    }
+
+    // Wave parameter alpha
     [SerializeField]
     float _waveAlpha = 1;
 
+    public float waveAlpha {
+        get { return _waveAlpha; }
+        set { _waveAlpha = value; }
+    }
+
+    // Wave parameter beta
     [SerializeField]
     float _waveBeta = 1;
 
+    public float waveBeta {
+        get { return _waveBeta; }
+        set { _waveBeta = value; }
+    }
+
+    // Cutoff level
     [SerializeField, Range(0, 1)]
     float _cutoff = 0.5f;
 
-    [SerializeField]
+    public float cutoff {
+        get { return _cutoff; }
+        set { _cutoff = value; }
+    }
+
+    // Noise speed
+    [SerializeField, Header("Noise Parameters")]
     float _noiseSpeed = 3;
 
+    public float noiseSpeed {
+        get { return _noiseSpeed; }
+        set { _noiseSpeed = value; }
+    }
+
+    // Noise frequency
     [SerializeField]
     float _noiseFrequency = 3;
 
+    public float noiseFrequency {
+        get { return _noiseFrequency; }
+        set { _noiseFrequency = value; }
+    }
+
+    // Noise amplitude
     [SerializeField]
     float _noiseAmplitude = 5;
 
-    [SerializeField]
+    public float noiseAmplitude {
+        get { return _noiseAmplitude; }
+        set { _noiseAmplitude = value; }
+    }
+
+    // Rendering settings
+    [SerializeField, Header("Rendering")]
     Material _material;
 
     [SerializeField]
@@ -45,22 +89,9 @@ public class ShellRenderer : MonoBehaviour
     #region Private Members
 
     Mesh _mesh;
-    bool _needsReset = true;
-
+    int _subdivided = -1;
     float _waveTime;
     Vector3 _noiseOffset;
-
-    public void NotifyConfigChange()
-    {
-        _needsReset = true;
-    }
-
-    void ResetResources()
-    {
-        if (_mesh) DestroyImmediate(_mesh);
-        BuildMesh();
-        _needsReset = false;
-    }
 
     #endregion
 
@@ -68,7 +99,7 @@ public class ShellRenderer : MonoBehaviour
 
     void Update()
     {
-        if (_needsReset) ResetResources();
+        if (_subdivided != _subdivision) RebuildMesh();
 
         var noiseDir = new Vector3(1, 0.5f, 0.2f).normalized;
 
@@ -103,8 +134,10 @@ public class ShellRenderer : MonoBehaviour
 
     #region Mesh Builder
 
-    void BuildMesh()
+    void RebuildMesh()
     {
+        if (_mesh) DestroyImmediate(_mesh);
+
         // The Shell vertex shader needs positions of three vertices in a triangle
         // to calculate the normal vector. To provide these information, it uses
         // not only the position attribute but also the normal and tangent attributes

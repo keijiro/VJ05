@@ -14,13 +14,10 @@ public class ShellRenderer : MonoBehaviour
     float _waveSpeed = 8;
 
     [SerializeField]
-    Vector3 _alpha = new Vector3(3.3f, 1.3f, 1);
+    float _waveAlpha = 1;
 
     [SerializeField]
-    Vector3 _beta = new Vector3(0.028f, 0.047f, 0.032f);
-
-    [SerializeField]
-    Vector3 _gamma = new Vector3(1, 5.789f, 5.2f);
+    float _waveBeta = 1;
 
     [SerializeField, Range(0, 1)]
     float _cutoff = 0.5f;
@@ -33,9 +30,6 @@ public class ShellRenderer : MonoBehaviour
 
     [SerializeField]
     float _noiseAmplitude = 5;
-
-    [SerializeField]
-    float _noiseExponent = 2;
 
     [SerializeField]
     Material _material;
@@ -85,14 +79,18 @@ public class ShellRenderer : MonoBehaviour
 
         props.SetFloat("_Cutoff", _cutoff);
 
+        Vector3 wparam1 = new Vector3(3.1f, 2.3f, 6.3f);
+        Vector3 wparam2 = new Vector3(0.031f, 0.022f, 0.039f);
+        Vector3 wparam3 = new Vector3(1.21f, 0.93f, 1.73f);
+
         props.SetFloat("_WTime", _waveTime);
-        props.SetVector("_WParams1", _alpha);
-        props.SetVector("_WParams2", _beta);
-        props.SetVector("_WParams3", _gamma);
+        props.SetVector("_WParams1", wparam1 * _waveAlpha);
+        props.SetVector("_WParams2", wparam2);
+        props.SetVector("_WParams3", wparam3 * _waveBeta);
 
         props.SetVector("_NOffset", _noiseOffset);
 
-        var np = new Vector3(_noiseFrequency, _noiseAmplitude, _noiseExponent);
+        var np = new Vector3(_noiseFrequency, _noiseAmplitude, 4.5f);
         props.SetVector("_NParams", np);
 
         Graphics.DrawMesh(

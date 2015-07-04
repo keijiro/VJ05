@@ -44,7 +44,7 @@
         
         CGPROGRAM
 
-        #pragma surface surf Standard fullforwardshadows addshadow alphatest:_Cutoff
+        #pragma surface surf Standard alphatest:_Cutoff
         #pragma target 3.0
 
         struct Input {
@@ -64,6 +64,7 @@
             o.Emission = _Emission;
             o.Alpha = wave(IN.worldPos);
         }
+
         ENDCG
 
         // back-face
@@ -72,7 +73,7 @@
         
         CGPROGRAM
 
-        #pragma surface surf Standard fullforwardshadows addshadow alphatest:_Cutoff
+        #pragma surface surf Standard alphatest:_Cutoff
         #pragma target 3.0
 
         struct Input {
@@ -92,6 +93,7 @@
             o.Smoothness = _Glossiness;
             o.Alpha = wave(IN.worldPos);
         }
+
         ENDCG
     }
 }

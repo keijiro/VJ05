@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.Rendering;
 using Emgen;
 
 [ExecuteInEditMode]
@@ -11,6 +12,12 @@ public class ShellRenderer : MonoBehaviour
 
     [SerializeField]
     Material _material;
+
+    [SerializeField]
+    bool _receiveShadows;
+
+    [SerializeField]
+    ShadowCastingMode _shadowCastingMode;
 
     #endregion
 
@@ -39,7 +46,10 @@ public class ShellRenderer : MonoBehaviour
     {
         if (_needsReset) ResetResources();
 
-        Graphics.DrawMesh(_mesh, transform.position, transform.rotation, _material, 0, null, 0);
+        Graphics.DrawMesh(
+            _mesh, transform.position, transform.rotation,
+            _material, 0, null, 0, null,
+            _shadowCastingMode, _receiveShadows);
     }
 
     #endregion

@@ -84,9 +84,9 @@ Shader "Hidden/Kvant/Lattice/Kernels"
         float3 d = float3(0, n1, 0);
     #endif
 
-        float slope = min(1, pow(abs(vp.x / 10) + 0.1, 2));
-
-        op += lerp((float3)-1, clamp(d, _ClampRange.x, _ClampRange.y), slope) * _Amplitude;
+        // VJ05: hacks for making valley
+        float slope = min(1, pow(abs(vp.x / 15) + 0.3, 2));
+        op += lerp((float3)-0.5, clamp(d, _ClampRange.x, _ClampRange.y), slope) * _Amplitude;
 
         return float4(op, 1);
     }

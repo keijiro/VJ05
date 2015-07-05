@@ -63,6 +63,7 @@ Shader "Kvant/Lattice/Surface"
         #else
             half dummy;
         #endif
+            float3 worldPos;
         };
 
         void vert(inout appdata_full v, out Input data)
@@ -90,6 +91,9 @@ Shader "Kvant/Lattice/Surface"
 
         void surf(Input IN, inout SurfaceOutputStandard o)
         {
+            //float str = fmod(abs(IN.worldPos.x + _Time.y), 0.5) * 2;
+            //clip(str - 0.97);
+            //o.Emission = float4(2, 0, 0, 1) * str;
         #if _ALBEDOMAP || _NORMALMAP || _OCCLUSIONMAP
             // Calculate a blend factor for triplanar mapping.
             float3 blend = normalize(abs(IN.localNormal));

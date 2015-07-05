@@ -64,6 +64,15 @@ public class ShellRenderer : MonoBehaviour
         set { _noiseAmplitude = value; }
     }
 
+    // Exponent of noise amplitude
+    [SerializeField]
+    float _noiseExponent = 4.5f;
+
+    public float noiseExponent {
+        get { return _noiseExponent; }
+        set { _noiseExponent = value; }
+    }
+
     // Noise frequency
     [SerializeField]
     float _noiseFrequency = 3;
@@ -150,11 +159,11 @@ public class ShellRenderer : MonoBehaviour
 
         props.SetVector("_NOffset", _noiseOffset);
 
-        var np = new Vector3(_noiseFrequency, _noiseAmplitude, 4.5f);
+        var np = new Vector3(_noiseFrequency, _noiseAmplitude, _noiseExponent);
         props.SetVector("_NParams", np);
 
         Graphics.DrawMesh(
-            _mesh, transform.position, transform.rotation,
+            _mesh, transform.localToWorldMatrix,
             _material, 0, null, 0, props,
             _shadowCastingMode, _receiveShadows);
     }

@@ -112,7 +112,7 @@ public class FurballRenderer : MonoBehaviour
         props.SetFloat("_NoiseExponent", _noiseExponent);
 
         Graphics.DrawMesh(
-            _mesh, transform.position, transform.rotation,
+            _mesh, transform.localToWorldMatrix,
             _material, 0, null, 0, props,
             _shadowCastingMode, _receiveShadows);
     }

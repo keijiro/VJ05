@@ -6,9 +6,9 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: Heart
-  m_Shader: {fileID: 4800000, guid: 5fa2f7daa9fd24a82877fe8d6175242f, type: 3}
-  m_ShaderKeywords: 
+  m_Name: Dust
+  m_Shader: {fileID: 4800000, guid: 8e1247c2208bf4bef82f45b4c36f0600, type: 3}
+  m_ShaderKeywords: _COLORMODE_SINGLE
   m_LightmapFlags: 5
   m_CustomRenderQueue: -1
   stringTagMap: {}
@@ -25,6 +25,13 @@ Material:
       data:
         first:
           name: _BumpMap
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _NormalMap
         second:
           m_Texture: {fileID: 0}
           m_Scale: {x: 1, y: 1}
@@ -78,6 +85,20 @@ Material:
           m_Texture: {fileID: 0}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _PositionBuffer
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _RotationBuffer
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
     m_Floats:
       data:
         first:
@@ -93,12 +114,8 @@ Material:
         second: .5
       data:
         first:
-          name: _Metallic1
-        second: .481000006
-      data:
-        first:
-          name: _Metallic2
-        second: .200000003
+          name: _Smoothness
+        second: .786000013
       data:
         first:
           name: _Parallax
@@ -134,15 +151,31 @@ Material:
       data:
         first:
           name: _Metallic
+        second: .779999971
+      data:
+        first:
+          name: _OcclusionStr
+        second: 1
+      data:
+        first:
+          name: _NormalScale
+        second: 1
+      data:
+        first:
+          name: _ScaleMin
+        second: 1
+      data:
+        first:
+          name: _ScaleMax
+        second: 1
+      data:
+        first:
+          name: _ColorMode
         second: 0
       data:
         first:
-          name: _Glossiness1
-        second: .610000014
-      data:
-        first:
-          name: _Glossiness2
-        second: .5
+          name: _RandomSeed
+        second: 0
     m_Colors:
       data:
         first:
@@ -155,12 +188,4 @@ Material:
       data:
         first:
           name: _Color2
-        second: {r: 1, g: .125, b: .125, a: 1}
-      data:
-        first:
-          name: _Emission
-        second: {r: 4.67330885, g: 2.64591765, b: 2.64591765, a: 1}
-      data:
-        first:
-          name: _Color1
-        second: {r: 1, g: .0955882072, b: .263996273, a: 1}
+        second: {r: .5, g: .5, b: .5, a: 1}

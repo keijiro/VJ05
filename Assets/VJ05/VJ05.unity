@@ -234,9 +234,9 @@ MonoBehaviour:
       m_PreInfinity: 2
       m_PostInfinity: 2
   offset:
-    _control: 0
+    _control: 1
     _midiChannel: 16
-    _knobIndex: 2
+    _knobIndex: 78
     _noteNumber: 40
     _inputAxis: Jump
     _curve:
@@ -455,7 +455,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 197522614}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2c73495c07c574c8888398de99a9c523, type: 3}
   m_Name: 
@@ -584,7 +584,7 @@ MonoBehaviour:
   offset:
     _control: 1
     _midiChannel: 16
-    _knobIndex: 2
+    _knobIndex: 72
     _noteNumber: 40
     _inputAxis: Jump
     _curve:
@@ -680,7 +680,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1035708594}
-  m_RootOrder: 4
+  m_RootOrder: 1
 --- !u!114 &211051755
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -799,9 +799,9 @@ MonoBehaviour:
       m_PreInfinity: 2
       m_PostInfinity: 2
   offset:
-    _control: 0
+    _control: 1
     _midiChannel: 16
-    _knobIndex: 2
+    _knobIndex: 64
     _noteNumber: 40
     _inputAxis: Jump
     _curve:
@@ -940,7 +940,7 @@ MonoBehaviour:
   _noiseWarp: 0
   _material: {fileID: 2100000, guid: e76fa27308a46452399eb64205127f93, type: 2}
   _castShadows: 0
-  _receiveShadows: 0
+  _receiveShadows: 1
   _lineColor: {r: .522058845, g: .28790009, b: .28790009, a: 0}
   _debug: 0
   _kernelShader: {fileID: 4800000, guid: cc0a7661a4d054189b5c00584b5c766a, type: 3}
@@ -957,7 +957,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1330072422}
-  m_RootOrder: 0
+  m_RootOrder: 3
 --- !u!114 &351686156
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1114,9 +1114,9 @@ MonoBehaviour:
       m_PreInfinity: 2
       m_PostInfinity: 2
   offset:
-    _control: 0
+    _control: 1
     _midiChannel: 16
-    _knobIndex: 2
+    _knobIndex: 19
     _noteNumber: 40
     _inputAxis: Jump
     _curve:
@@ -1350,7 +1350,7 @@ MonoBehaviour:
   _maxRandomScale: 2
   _material: {fileID: 2100000, guid: 36f129272d7c38446946908d69f36ebc, type: 2}
   _castShadows: 0
-  _receiveShadows: 0
+  _receiveShadows: 1
   _debug: 0
   _defaultShape: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
   _defaultMaterial: {fileID: 2100000, guid: dddcdd0c49f184396b3fe5d5ba46b9ce, type: 2}
@@ -1367,7 +1367,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1330072422}
-  m_RootOrder: 3
+  m_RootOrder: 0
 --- !u!114 &385366396
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1580,9 +1580,9 @@ MonoBehaviour:
       m_PreInfinity: 2
       m_PostInfinity: 2
   offset:
-    _control: 0
+    _control: 1
     _midiChannel: 16
-    _knobIndex: 2
+    _knobIndex: 16
     _noteNumber: 40
     _inputAxis: Jump
     _curve:
@@ -1830,7 +1830,7 @@ MonoBehaviour:
   _maxRandomScale: 1
   _material: {fileID: 2100000, guid: 240e02180b4964a9398c611a14032be4, type: 2}
   _castShadows: 0
-  _receiveShadows: 0
+  _receiveShadows: 1
   _debug: 0
   _defaultShape: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
   _defaultMaterial: {fileID: 2100000, guid: dddcdd0c49f184396b3fe5d5ba46b9ce, type: 2}
@@ -1847,7 +1847,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1035708594}
-  m_RootOrder: 1
+  m_RootOrder: 0
 --- !u!114 &444169621
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2060,9 +2060,9 @@ MonoBehaviour:
       m_PreInfinity: 2
       m_PostInfinity: 2
   offset:
-    _control: 0
+    _control: 1
     _midiChannel: 16
-    _knobIndex: 2
+    _knobIndex: 23
     _noteNumber: 40
     _inputAxis: Jump
     _curve:
@@ -2265,8 +2265,8 @@ MonoBehaviour:
   _minRandomScale: .347727299
   _maxRandomScale: .547727108
   _material: {fileID: 2100000, guid: 3083d9fb9a57948cb88c7cd26aa32ad8, type: 2}
-  _castShadows: 0
-  _receiveShadows: 0
+  _castShadows: 1
+  _receiveShadows: 1
   _debug: 0
   _defaultShape: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
   _defaultMaterial: {fileID: 2100000, guid: dddcdd0c49f184396b3fe5d5ba46b9ce, type: 2}
@@ -2283,7 +2283,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1035708594}
-  m_RootOrder: 5
+  m_RootOrder: 4
 --- !u!114 &624098798
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2485,9 +2485,9 @@ MonoBehaviour:
       m_PreInfinity: 2
       m_PostInfinity: 2
   offset:
-    _control: 0
+    _control: 1
     _midiChannel: 16
-    _knobIndex: 2
+    _knobIndex: 67
     _noteNumber: 40
     _inputAxis: Jump
     _curve:
@@ -2664,7 +2664,7 @@ MonoBehaviour:
   _noiseFrequency: .400000006
   _noiseSpeed: 2
   _material: {fileID: 2100000, guid: c1c6493f12b984584903bf3cea8b83cd, type: 2}
-  _receiveShadows: 0
+  _receiveShadows: 1
   _shadowCastingMode: 0
 --- !u!4 &681798442
 Transform:
@@ -2900,7 +2900,7 @@ MonoBehaviour:
       m_PreInfinity: 2
       m_PostInfinity: 2
   offset:
-    _control: 0
+    _control: 1
     _midiChannel: 16
     _knobIndex: 2
     _noteNumber: 40
@@ -3236,8 +3236,8 @@ MonoBehaviour:
   _minScale: .8176651
   _maxScale: 1.615695
   _material: {fileID: 2100000, guid: 08b11f9fafba144d88c0bb77d240f827, type: 2}
-  _castShadows: 0
-  _receiveShadows: 0
+  _castShadows: 1
+  _receiveShadows: 1
   _randomSeed: 0
   _debug: 0
   _defaultMaterial: {fileID: 2100000, guid: e1aad33bf16194534a7c99e7c01a8249, type: 2}
@@ -3254,7 +3254,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1035708594}
-  m_RootOrder: 0
+  m_RootOrder: 3
 --- !u!114 &735639009
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3373,9 +3373,9 @@ MonoBehaviour:
       m_PreInfinity: 2
       m_PostInfinity: 2
   offset:
-    _control: 0
+    _control: 1
     _midiChannel: 16
-    _knobIndex: 2
+    _knobIndex: 66
     _noteNumber: 40
     _inputAxis: Jump
     _curve:
@@ -3610,7 +3610,7 @@ MonoBehaviour:
   _noiseWarp: 0
   _material: {fileID: 2100000, guid: 22db8a09e21a2426e95d0d5ad2948e74, type: 2}
   _castShadows: 0
-  _receiveShadows: 0
+  _receiveShadows: 1
   _lineColor: {r: 0, g: 0, b: 0, a: 0}
   _debug: 0
   _kernelShader: {fileID: 4800000, guid: e81d8e7c37a014393ada103e7c8f34f7, type: 3}
@@ -3627,7 +3627,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1330072422}
-  m_RootOrder: 1
+  m_RootOrder: 2
 --- !u!114 &776231784
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3795,9 +3795,9 @@ MonoBehaviour:
       m_PreInfinity: 2
       m_PostInfinity: 2
   offset:
-    _control: 0
+    _control: 1
     _midiChannel: 16
-    _knobIndex: 2
+    _knobIndex: 18
     _noteNumber: 40
     _inputAxis: Jump
     _curve:
@@ -4034,7 +4034,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 850407834}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2c73495c07c574c8888398de99a9c523, type: 3}
   m_Name: 
@@ -4140,9 +4140,9 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
   gain:
-    _control: 1
+    _control: 0
     _midiChannel: 16
-    _knobIndex: 2
+    _knobIndex: 73
     _noteNumber: 40
     _inputAxis: Jump
     _curve:
@@ -4161,9 +4161,9 @@ MonoBehaviour:
       m_PreInfinity: 2
       m_PostInfinity: 2
   offset:
-    _control: 0
+    _control: 1
     _midiChannel: 16
-    _knobIndex: 2
+    _knobIndex: 73
     _noteNumber: 40
     _inputAxis: Jump
     _curve:
@@ -4690,9 +4690,9 @@ MonoBehaviour:
       m_PreInfinity: 2
       m_PostInfinity: 2
   offset:
-    _control: 0
+    _control: 1
     _midiChannel: 16
-    _knobIndex: 2
+    _knobIndex: 55
     _noteNumber: 40
     _inputAxis: Jump
     _curve:
@@ -5048,9 +5048,9 @@ MonoBehaviour:
       m_PreInfinity: 2
       m_PostInfinity: 2
   offset:
-    _control: 0
+    _control: 1
     _midiChannel: 16
-    _knobIndex: 2
+    _knobIndex: 1
     _noteNumber: 40
     _inputAxis: Jump
     _curve:
@@ -5293,9 +5293,9 @@ MonoBehaviour:
       m_PreInfinity: 2
       m_PostInfinity: 2
   offset:
-    _control: 0
+    _control: 1
     _midiChannel: 16
-    _knobIndex: 2
+    _knobIndex: 6
     _noteNumber: 40
     _inputAxis: Jump
     _curve:
@@ -5345,12 +5345,12 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 735639008}
   - {fileID: 444169620}
-  - {fileID: 1363799321}
-  - {fileID: 1453941805}
   - {fileID: 211051754}
+  - {fileID: 1363799321}
+  - {fileID: 735639008}
   - {fileID: 624098797}
+  - {fileID: 1453941805}
   m_Father: {fileID: 0}
   m_RootOrder: 4
 --- !u!1 &1042496132
@@ -5699,9 +5699,9 @@ MonoBehaviour:
       m_PreInfinity: 2
       m_PostInfinity: 2
   offset:
-    _control: 0
+    _control: 1
     _midiChannel: 16
-    _knobIndex: 2
+    _knobIndex: 4
     _noteNumber: 40
     _inputAxis: Jump
     _curve:
@@ -5929,9 +5929,9 @@ MonoBehaviour:
       m_PreInfinity: 2
       m_PostInfinity: 2
   offset:
-    _control: 0
+    _control: 1
     _midiChannel: 16
-    _knobIndex: 2
+    _knobIndex: 0
     _noteNumber: 40
     _inputAxis: Jump
     _curve:
@@ -6100,7 +6100,7 @@ Light:
   m_Shadows:
     m_Type: 2
     m_Resolution: -1
-    m_Strength: 1
+    m_Strength: .200000003
     m_Bias: .219999999
     m_NormalBias: .400000006
   m_Cookie: {fileID: 0}
@@ -6331,10 +6331,10 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 30}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 351686155}
-  - {fileID: 776231783}
-  - {fileID: 2022798588}
   - {fileID: 385366395}
+  - {fileID: 2022798588}
+  - {fileID: 776231783}
+  - {fileID: 351686155}
   m_Father: {fileID: 0}
   m_RootOrder: 3
 --- !u!1 &1330942558
@@ -6472,8 +6472,8 @@ MonoBehaviour:
   _minScale: .00999999978
   _maxScale: .261082172
   _material: {fileID: 2100000, guid: b85e7fe39619c4f88810b3503fa3a5bc, type: 2}
-  _castShadows: 0
-  _receiveShadows: 0
+  _castShadows: 1
+  _receiveShadows: 1
   _randomSeed: 0
   _debug: 0
   _defaultMaterial: {fileID: 2100000, guid: e1aad33bf16194534a7c99e7c01a8249, type: 2}
@@ -6609,9 +6609,9 @@ MonoBehaviour:
       m_PreInfinity: 2
       m_PostInfinity: 2
   offset:
-    _control: 0
+    _control: 1
     _midiChannel: 16
-    _knobIndex: 2
+    _knobIndex: 65
     _noteNumber: 40
     _inputAxis: Jump
     _curve:
@@ -8157,7 +8157,7 @@ MonoBehaviour:
   _maxScale: .538593829
   _material: {fileID: 0}
   _castShadows: 0
-  _receiveShadows: 0
+  _receiveShadows: 1
   _randomSeed: 0
   _debug: 0
   _defaultMaterial: {fileID: 2100000, guid: e1aad33bf16194534a7c99e7c01a8249, type: 2}
@@ -8174,7 +8174,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1035708594}
-  m_RootOrder: 3
+  m_RootOrder: 5
 --- !u!114 &1453941806
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8312,9 +8312,9 @@ MonoBehaviour:
       m_PreInfinity: 2
       m_PostInfinity: 2
   offset:
-    _control: 0
+    _control: 1
     _midiChannel: 16
-    _knobIndex: 2
+    _knobIndex: 3
     _noteNumber: 40
     _inputAxis: Jump
     _curve:
@@ -8696,9 +8696,9 @@ MonoBehaviour:
       m_PreInfinity: 2
       m_PostInfinity: 2
   offset:
-    _control: 0
+    _control: 1
     _midiChannel: 16
-    _knobIndex: 2
+    _knobIndex: 5
     _noteNumber: 40
     _inputAxis: Jump
     _curve:
@@ -8950,9 +8950,9 @@ MonoBehaviour:
       m_PreInfinity: 2
       m_PostInfinity: 2
   offset:
-    _control: 0
+    _control: 1
     _midiChannel: 16
-    _knobIndex: 2
+    _knobIndex: 39
     _noteNumber: 40
     _inputAxis: Jump
     _curve:
@@ -9232,7 +9232,7 @@ MonoBehaviour:
   offset:
     _control: 1
     _midiChannel: 16
-    _knobIndex: 2
+    _knobIndex: 79
     _noteNumber: 40
     _inputAxis: Jump
     _curve:
@@ -9480,9 +9480,9 @@ MonoBehaviour:
       m_PreInfinity: 2
       m_PostInfinity: 2
   offset:
-    _control: 0
+    _control: 1
     _midiChannel: 16
-    _knobIndex: 2
+    _knobIndex: 7
     _noteNumber: 40
     _inputAxis: Jump
     _curve:
@@ -10026,7 +10026,7 @@ MonoBehaviour:
   _maxRandomScale: 1.32161641
   _material: {fileID: 2100000, guid: 61dd225908c464246a7b4f469dad69ef, type: 2}
   _castShadows: 0
-  _receiveShadows: 0
+  _receiveShadows: 1
   _debug: 0
   _defaultShape: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
   _defaultMaterial: {fileID: 2100000, guid: dddcdd0c49f184396b3fe5d5ba46b9ce, type: 2}
@@ -10043,7 +10043,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1330072422}
-  m_RootOrder: 2
+  m_RootOrder: 1
 --- !u!114 &2022798589
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10162,9 +10162,9 @@ MonoBehaviour:
       m_PreInfinity: 2
       m_PostInfinity: 2
   offset:
-    _control: 0
+    _control: 1
     _midiChannel: 16
-    _knobIndex: 2
+    _knobIndex: 17
     _noteNumber: 40
     _inputAxis: Jump
     _curve:

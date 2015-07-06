@@ -9,16 +9,6 @@ xcuserdata
 xcshareddata
 *.pbxuser
 
-# Visual Studio
-Debug/
-Release/
-x64/
-x86/
-build/
-ipch/
-*.sdf
-.vs
-
 # Misc
 *.swp
 *.lnk

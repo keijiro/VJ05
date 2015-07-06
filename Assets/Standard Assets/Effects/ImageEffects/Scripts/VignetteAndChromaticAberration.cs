@@ -27,6 +27,10 @@ namespace UnityStandardAssets.ImageEffects
         public Shader separableBlurShader;
         public Shader chromAberrationShader;
         
+        public float Intensity {
+            get { return intensity; }
+            set { intensity = value; }
+        }
         
         private Material m_VignetteMaterial;
         private Material m_SeparableBlurMaterial;

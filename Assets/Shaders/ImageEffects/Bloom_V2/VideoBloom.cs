@@ -38,6 +38,11 @@ public class VideoBloom : PostEffectsBase
 	public BlendingMode BlendMode = BlendingMode.Add;
 	public bool HighQuality = true;
 
+    public float masterAmount {
+        get { return MasterAmount; }
+        set { MasterAmount = value; }
+    }
+
 	public Shader videoBloomShader;
 	private Material videoBloomMaterial;
 

@@ -241,7 +241,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &211051753
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -254,18 +254,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _maxParticles: 10000
-  _emitterPosition: {x: 0, y: 0, z: 10}
-  _emitterSize: {x: 10, y: 10, z: 10}
+  _emitterPosition: {x: 0, y: 0, z: 15}
+  _emitterSize: {x: 30, y: 30, z: 10}
   _throttle: 1
   _direction: {x: -0, y: -0, z: -1}
-  _minSpeed: 4.74747467
-  _maxSpeed: 11.2626266
+  _minSpeed: 9.53535366
+  _maxSpeed: 17.5353546
   _spread: 0
   _noiseAmplitude: 1.5
   _noiseFrequency: .200000003
   _noiseSpeed: 1
-  _color: {r: .367647052, g: .367647052, b: .367647052, a: 1}
-  _tail: 2
+  _color: {r: .632352948, g: .632352948, b: .632352948, a: 1}
+  _tail: 3
   _randomSeed: 0
   _debug: 0
   _kernelShader: {fileID: 4800000, guid: 6afe8e4e613e44e00bcbd80b0615a8de, type: 3}
@@ -440,7 +440,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &385366394
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2245,7 +2245,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1095523582
 MonoBehaviour:
   m_ObjectHideFlags: 0

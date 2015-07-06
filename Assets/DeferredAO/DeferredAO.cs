@@ -95,6 +95,7 @@ public class DeferredAO : MonoBehaviour
 
     #region MonoBehaviour Functions
 
+    [ImageEffectOpaque]
     void OnRenderImage(RenderTexture source, RenderTexture destination)
     {
         if (_material == null) {

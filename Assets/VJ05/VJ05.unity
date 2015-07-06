@@ -8785,7 +8785,7 @@ MonoBehaviour:
   KernelSize: 50
   MediumKernelScale: 1.5
   LargeKernelScale: 8
-  BlendMode: 1
+  BlendMode: 0
   HighQuality: 1
   videoBloomShader: {fileID: 4800000, guid: 4da5120001c1945e99d8db7be2c8c652, type: 3}
 --- !u!114 &1428037893

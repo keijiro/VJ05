@@ -223,6 +223,8 @@ public class ShellRenderer : MonoBehaviour
         _mesh.tangents = va3;
 
         _mesh.SetIndices(vc.MakeIndexArrayForFlatMesh(), MeshTopology.Triangles, 0);
+
+        _subdivided = _subdivision;
     }
 
     #endregion

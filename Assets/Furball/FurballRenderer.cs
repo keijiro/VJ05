@@ -183,6 +183,8 @@ public class FurballRenderer : MonoBehaviour
         _mesh.colors = colors;
         _mesh.SetIndices(indices, MeshTopology.Triangles, 0);
         _mesh.RecalculateNormals();
+
+        _subdivided = _subdivision;
     }
 
     #endregion

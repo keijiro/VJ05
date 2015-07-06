@@ -12,7 +12,7 @@
         
         CGPROGRAM
 
-        #pragma surface surf Standard vertex:vert
+        #pragma surface surf Standard vertex:vert nolightmap addshadow
         #pragma target 3.0
 
         #include "ClassicNoise3D.cginc"
@@ -47,5 +47,4 @@
 
         ENDCG
     }
-    FallBack "Diffuse"
 }

@@ -50,7 +50,7 @@
 
         CGPROGRAM
 
-        #pragma surface surf Standard vertex:vert alphatest:_Cutoff
+        #pragma surface surf Standard vertex:vert alphatest:_Cutoff nolightmap addshadow
         #pragma target 3.0
 
         struct Input {
@@ -88,7 +88,7 @@
 
         CGPROGRAM
 
-        #pragma surface surf Standard vertex:vert alphatest:_Cutoff
+        #pragma surface surf Standard vertex:vert alphatest:_Cutoff nolightmap addshadow
         #pragma target 3.0
 
         struct Input {

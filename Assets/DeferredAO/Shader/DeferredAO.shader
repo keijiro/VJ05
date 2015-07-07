@@ -38,14 +38,11 @@ Shader "Hidden/DeferredAO"
 
 	sampler2D_float _CameraDepthTexture;
     sampler2D _CameraGBufferTexture2;
+    float4x4 _WorldToCamera;
 
     float _Intensity;
     float _Radius;
     float _FallOff;
-
-    // Camera projection matrix
-    // Note: UNITY_MATRIX_P doesn't work with pixel shaders.
-    float4x4 _Projection;
 
     #if _SAMPLE_LOW
     static const int SAMPLE_COUNT = 8;
@@ -83,17 +80,19 @@ Shader "Hidden/DeferredAO"
         // Sample a linear depth on the depth buffer.
         float depth_o = SAMPLE_DEPTH_TEXTURE(_CameraDepthTexture, i.uv);
         depth_o = LinearEyeDepth(depth_o);
-        if (depth_o > _FallOff) return src;
+
+        // This early-out flow control is not allowed in HLSL.
+        // if (depth_o > _FallOff) return src;
 
         // Sample a view-space normal vector on the g-buffer.
         float3 norm_o = tex2D(_CameraGBufferTexture2, i.uv).xyz * 2 - 1;
-        norm_o = mul((float3x3)UNITY_MATRIX_V, norm_o);
+        norm_o = mul((float3x3)_WorldToCamera, norm_o);
 
         // Reconstruct the view-space position.
-        float2 p11_22 = float2(_Projection._11, _Projection._22);
+        float2 p11_22 = float2(unity_CameraProjection._11, unity_CameraProjection._22);
         float3 pos_o = float3((i.uv * 2 - 1) / p11_22, 1) * depth_o;
 
-        float3x3 proj = (float3x3)_Projection;
+        float3x3 proj = (float3x3)unity_CameraProjection;
 
         float occ = 0.0;
         for (int s = 0; s < SAMPLE_COUNT; s++)
@@ -123,7 +122,7 @@ Shader "Hidden/DeferredAO"
         }
 
         float falloff = 1.0 - depth_o / _FallOff;
-        occ *= _Intensity * falloff / SAMPLE_COUNT;
+        occ = saturate(occ * _Intensity * falloff / SAMPLE_COUNT);
 
         return half4(lerp(src.rgb, (half3)0.0, occ), src.a);
     }

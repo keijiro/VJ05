@@ -14,7 +14,7 @@ Shader "Hidden/Kvant/Lattice/Kernels"
     #pragma multi_compile _ ENABLE_WARP
 
     #include "UnityCG.cginc"
-    #include "ClassicNoise2D.cginc"
+    #include "ClassicNoise3D.cginc"
 
     sampler2D _MainTex;
     float2 _MainTex_TexelSize;
@@ -30,13 +30,13 @@ Shader "Hidden/Kvant/Lattice/Kernels"
     {
         float2 vp = (i.uv.xy - (float2)0.5) * _Extent;
 
-        float2 nc1 = (vp + _Offset) * _Frequency;
+        float3 nc1 = float3((vp + _Offset) * _Frequency, _Time.x);
     #if ENABLE_WARP
         float2 nc2 = nc1 + float2(124.343, 311.591);
         float2 nc3 = nc1 + float2(273.534, 178.392);
     #endif
 
-        float2 np = float2(100000, 100000);
+        float3 np = float3(100000, 100000, 100000);
 
         float n1 = pnoise(nc1, np);
     #if ENABLE_WARP
@@ -84,9 +84,7 @@ Shader "Hidden/Kvant/Lattice/Kernels"
         float3 d = float3(0, n1, 0);
     #endif
 
-        // VJ05: hacks for making valley
-        float slope = min(1, pow(abs(vp.x / 15) + 0.3, 2));
-        op += lerp((float3)-0.5, clamp(d, _ClampRange.x, _ClampRange.y), slope) * _Amplitude;
+        op += clamp(d, _ClampRange.x, _ClampRange.y) * _Amplitude;
 
         return float4(op, 1);
     }

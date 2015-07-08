@@ -115,7 +115,7 @@ Material:
       data:
         first:
           name: _Smoothness
-        second: .36500001
+        second: .0960000008
       data:
         first:
           name: _Parallax
@@ -151,7 +151,7 @@ Material:
       data:
         first:
           name: _Metallic
-        second: .061999999
+        second: .476000011
       data:
         first:
           name: _OcclusionStr
@@ -159,7 +159,7 @@ Material:
       data:
         first:
           name: _NormalScale
-        second: .400000006
+        second: 1.13
       data:
         first:
           name: _MapScale
@@ -172,4 +172,4 @@ Material:
       data:
         first:
           name: _Color
-        second: {r: .477941155, g: .477941155, b: .477941155, a: 1}
+        second: {r: .141435981, g: .148926139, b: .176470578, a: 1}

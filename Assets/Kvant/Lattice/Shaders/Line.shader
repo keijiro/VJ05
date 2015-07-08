@@ -52,7 +52,7 @@ Shader "Hidden/Kvant/Lattice/Line"
 
     SubShader
     {
-        Tags { "Queue" = "Geometry+1" }
+        Tags { "Queue" = "Transparent" }
         Pass
         {
             Blend SrcAlpha OneMinusSrcAlpha

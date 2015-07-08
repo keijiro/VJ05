@@ -1128,7 +1128,6 @@ GameObject:
   - 114: {fileID: 351686154}
   - 114: {fileID: 351686156}
   - 114: {fileID: 351686158}
-  - 114: {fileID: 351686157}
   - 114: {fileID: 351686159}
   - 114: {fileID: 351686160}
   m_Layer: 0
@@ -1149,20 +1148,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 707f38db09f5c4f19bb312c9b6160423, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _columns: 200
-  _rows: 200
-  _extent: {x: 100, y: 100}
+  _columns: 250
+  _rows: 250
+  _extent: {x: 150, y: 150}
   _offset: {x: 0, y: 0}
-  _noiseFrequency: .100000001
+  _noiseFrequency: .0500000007
   _noiseDepth: 5
-  _noiseClampMin: -1
-  _noiseClampMax: 1
-  _noiseElevation: 5.4000001
+  _noiseClampMin: -.349999994
+  _noiseClampMax: .560000002
+  _noiseElevation: 8.30000019
   _noiseWarp: 0
   _material: {fileID: 2100000, guid: e76fa27308a46452399eb64205127f93, type: 2}
   _castShadows: 0
   _receiveShadows: 1
-  _lineColor: {r: .522058845, g: .28790009, b: .28790009, a: 0}
+  _lineColor: {r: .713235259, g: .512646854, b: .403817028, a: 0}
+  _cutoff: 0
   _debug: 0
   _kernelShader: {fileID: 4800000, guid: cc0a7661a4d054189b5c00584b5c766a, type: 3}
   _lineShader: {fileID: 4800000, guid: a85ea180ea86a4e4880dd86148362ee6, type: 3}
@@ -1174,9 +1174,10 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 351686153}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -1.25999999, z: 0}
+  m_LocalPosition: {x: 0, y: -10, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 524054303}
   m_Father: {fileID: 1330072422}
   m_RootOrder: 3
 --- !u!114 &351686156
@@ -1192,96 +1193,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _yawAngle: -90
   _speed: 12
---- !u!114 &351686157
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 351686153}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2c73495c07c574c8888398de99a9c523, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  reaktor:
-    _mode: 1
-    _reference: {fileID: 0}
-    _name: 
-    _forceUpdate: 0
-  position:
-    mode: 4
-    min: 100
-    max: 0
-    curve:
-      serializedVersion: 2
-      m_Curve:
-      - time: 0
-        value: 0
-        inSlope: 0
-        outSlope: 5.00000048
-        tangentMode: 21
-      - time: .199999988
-        value: 1
-        inSlope: 5.00000048
-        outSlope: -0
-        tangentMode: 21
-      - time: 1
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 21
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-    arbitraryVector: {x: 0, y: -.5, z: 1}
-    randomness: 0
-  rotation:
-    mode: 1
-    min: -45
-    max: 0
-    curve:
-      serializedVersion: 2
-      m_Curve:
-      - time: 0
-        value: 0
-        inSlope: 0
-        outSlope: 5.00000048
-        tangentMode: 21
-      - time: .199999988
-        value: 1
-        inSlope: 5.00000048
-        outSlope: -0
-        tangentMode: 21
-      - time: 1
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 21
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-    arbitraryVector: {x: 0, y: 1, z: 0}
-    randomness: 0
-  scale:
-    mode: 0
-    min: 1
-    max: 2
-    curve:
-      serializedVersion: 2
-      m_Curve:
-      - time: 0
-        value: 0
-        inSlope: 0
-        outSlope: 1
-        tangentMode: 0
-      - time: 1
-        value: 1
-        inSlope: 1
-        outSlope: 0
-        tangentMode: 0
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-    arbitraryVector: {x: 1, y: 1, z: 1}
-    randomness: 0
-  addInitialValue: 0
 --- !u!114 &351686158
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1385,23 +1296,13 @@ MonoBehaviour:
     - time: 0
       value: 0
       inSlope: 0
-      outSlope: -0
-      tangentMode: 21
-    - time: .25
-      value: 0
-      inSlope: 0
-      outSlope: 21.6000004
-      tangentMode: 21
-    - time: .5
-      value: 5.4000001
-      inSlope: 21.6000004
-      outSlope: -0
-      tangentMode: 21
+      outSlope: 0
+      tangentMode: 0
     - time: 1
-      value: 5.4000001
+      value: 8.30000019
       inSlope: 0
       outSlope: 0
-      tangentMode: 21
+      tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
   origin: {x: 0, y: 0, z: 0}
@@ -2616,6 +2517,261 @@ Transform:
   - {fileID: 1208867923}
   m_Father: {fileID: 407943796}
   m_RootOrder: 1
+--- !u!1 &524054302
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 524054303}
+  - 114: {fileID: 524054305}
+  - 114: {fileID: 524054304}
+  - 114: {fileID: 524054306}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &524054303
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 524054302}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 351686155}
+  m_RootOrder: 0
+--- !u!114 &524054304
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 524054302}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcbea1f4bc98b455093b3b4b607ed9fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  reaktor:
+    _mode: 1
+    _reference: {fileID: 0}
+    _name: 
+    _forceUpdate: 0
+  optionType: 2
+  curve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: -0
+      tangentMode: 21
+    - time: .550000012
+      value: 0
+      inSlope: 0
+      outSlope: 2.22222233
+      tangentMode: 21
+    - time: 1
+      value: 1
+      inSlope: 2.22222233
+      outSlope: 0
+      tangentMode: 21
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  origin: {x: 0, y: 0, z: 0}
+  direction: {x: 1, y: 0, z: 0}
+  boolTarget:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Reaktion.GenericCurveGear+BoolEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  intTarget:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Reaktion.GenericCurveGear+IntEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  floatTarget:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 351686154}
+        m_MethodName: set_cutoff
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: Reaktion.GenericCurveGear+FloatEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  vectorTarget:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Reaktion.GenericCurveGear+VectorEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!114 &524054305
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 524054302}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a3ec3ae67a0841d8aa990e0f2e1089e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  injector:
+    _mode: 0
+    _reference: {fileID: 0}
+    _name: 
+    _forceUpdate: 1
+  audioCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 1
+      tangentMode: 0
+    - time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  gain:
+    _control: 0
+    _midiChannel: 16
+    _knobIndex: 2
+    _noteNumber: 40
+    _inputAxis: Jump
+    _curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 1
+        tangentMode: 0
+      - time: 1
+        value: 1
+        inSlope: 1
+        outSlope: 0
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+  offset:
+    _control: 1
+    _midiChannel: 16
+    _knobIndex: 20
+    _noteNumber: 40
+    _inputAxis: Jump
+    _curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 1
+        tangentMode: 0
+      - time: 1
+        value: 1
+        inSlope: 1
+        outSlope: 0
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+  sensitivity: .5
+  decaySpeed: 1
+  showAudioOptions: 0
+  headroom: 1
+  dynamicRange: 17
+  lowerBound: -60
+  falldown: .5
+--- !u!114 &524054306
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 524054302}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b78e344a432524336b96b71a19d5cb6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  reaktor:
+    _mode: 1
+    _reference: {fileID: 0}
+    _name: 
+    _forceUpdate: 0
+  gradient:
+    key0:
+      serializedVersion: 2
+      rgba: 5921535
+    key1:
+      serializedVersion: 2
+      rgba: 2287622911
+    key2:
+      serializedVersion: 2
+      rgba: 0
+    key3:
+      serializedVersion: 2
+      rgba: 0
+    key4:
+      serializedVersion: 2
+      rgba: 0
+    key5:
+      serializedVersion: 2
+      rgba: 0
+    key6:
+      serializedVersion: 2
+      rgba: 0
+    key7:
+      serializedVersion: 2
+      rgba: 0
+    ctime0: 0
+    ctime1: 65535
+    ctime2: 0
+    ctime3: 0
+    ctime4: 0
+    ctime5: 0
+    ctime6: 0
+    ctime7: 0
+    atime0: 655
+    atime1: 29491
+    atime2: 0
+    atime3: 0
+    atime4: 0
+    atime5: 0
+    atime6: 0
+    atime7: 0
+    m_NumColorKeys: 2
+    m_NumAlphaKeys: 2
+  target:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 351686154}
+        m_MethodName: set_lineColor
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: Reaktion.GenericGradientGear+ColorEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1 &597244026
 GameObject:
   m_ObjectHideFlags: 0

@@ -148,6 +148,15 @@ namespace Kvant
 
         #endregion
 
+        // VJ05
+        [SerializeField, Range(0, 1)]
+        float _cutoff = 0;
+
+        public float cutoff {
+            get { return _cutoff; }
+            set { _cutoff = value; }
+        }
+
         #region Editor Properties
 
         [SerializeField]
@@ -336,6 +345,10 @@ namespace Kvant
 
             props1.SetFloat("_UseBuffer", 1);
             props2.SetFloat("_UseBuffer", 1);
+
+            // VJ05
+            props1.SetFloat("_Cutoff", _cutoff);
+            props2.SetFloat("_Cutoff", _cutoff);
 
             // Temporary variables.
             var mesh = _bulkMesh.mesh;

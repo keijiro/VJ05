@@ -55,6 +55,8 @@ Shader "Kvant/Lattice/Surface"
         float3 _MapOffset; // hidden on inspector
         half _UseBuffer;   // hidden on inspector
 
+        float _Cutoff;
+
         struct Input
         {
         #if _ALBEDOMAP || _NORMALMAP || _OCCLUSIONMAP
@@ -91,9 +93,7 @@ Shader "Kvant/Lattice/Surface"
 
         void surf(Input IN, inout SurfaceOutputStandard o)
         {
-            //float str = fmod(abs(IN.worldPos.x + _Time.y), 0.5) * 2;
-            //clip(str - 0.97);
-            //o.Emission = float4(2, 0, 0, 1) * str;
+            clip(frac(IN.worldPos.y) - _Cutoff);
         #if _ALBEDOMAP || _NORMALMAP || _OCCLUSIONMAP
             // Calculate a blend factor for triplanar mapping.
             float3 blend = normalize(abs(IN.localNormal));

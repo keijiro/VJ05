@@ -698,12 +698,12 @@ MonoBehaviour:
       m_Curve:
       - time: 0
         value: 0
-        inSlope: 0
-        outSlope: 1
+        inSlope: 2.65506887
+        outSlope: 2.65506887
         tangentMode: 0
       - time: 1
         value: 1
-        inSlope: 1
+        inSlope: 0
         outSlope: 0
         tangentMode: 0
       m_PreInfinity: 2
@@ -1046,14 +1046,14 @@ MonoBehaviour:
   _emitterSize: {x: 45, y: 45, z: 10}
   _throttle: 1
   _direction: {x: -0, y: -0, z: -1}
-  _minSpeed: 9.53535366
-  _maxSpeed: 17.5353546
+  _minSpeed: 11
+  _maxSpeed: 14
   _spread: 0
-  _noiseAmplitude: 1.5
+  _noiseAmplitude: .300000012
   _noiseFrequency: .200000003
   _noiseSpeed: 1
-  _color: {r: .632352948, g: .632352948, b: .632352948, a: 1}
-  _tail: 3
+  _color: {r: .631372571, g: .631372571, b: .631372571, a: 1}
+  _tail: 1.5
   _randomSeed: 0
   _debug: 0
   _kernelShader: {fileID: 4800000, guid: 6afe8e4e613e44e00bcbd80b0615a8de, type: 3}
@@ -1094,12 +1094,12 @@ MonoBehaviour:
     - time: 0
       value: 0
       inSlope: 0
-      outSlope: 1
+      outSlope: 0
       tangentMode: 0
     - time: 1
       value: 1
-      inSlope: 1
-      outSlope: 0
+      inSlope: 2
+      outSlope: 2
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
@@ -3905,7 +3905,7 @@ MonoBehaviour:
         tangentMode: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
-  sensitivity: .5
+  sensitivity: .200000003
   decaySpeed: 1
   showAudioOptions: 0
   headroom: 1
@@ -8997,13 +8997,18 @@ MonoBehaviour:
     - time: 0
       value: 0
       inSlope: 0
-      outSlope: 1
-      tangentMode: 0
+      outSlope: -0
+      tangentMode: 21
+    - time: .5
+      value: 0
+      inSlope: 0
+      outSlope: 2
+      tangentMode: 21
     - time: 1
       value: 1
-      inSlope: 1
+      inSlope: 2
       outSlope: 0
-      tangentMode: 0
+      tangentMode: 21
     m_PreInfinity: 2
     m_PostInfinity: 2
   origin: {x: 0, y: 0, z: 0}
@@ -9607,18 +9612,18 @@ MonoBehaviour:
   scale:
     mode: 4
     min: 0
-    max: 1
+    max: 1.10000002
     curve:
       serializedVersion: 2
       m_Curve:
       - time: 0
         value: 0
-        inSlope: 0
-        outSlope: 1
+        inSlope: 2.62117434
+        outSlope: 2.62117434
         tangentMode: 0
       - time: 1
         value: 1
-        inSlope: 1
+        inSlope: 0
         outSlope: 0
         tangentMode: 0
       m_PreInfinity: 2
@@ -12936,13 +12941,13 @@ MonoBehaviour:
   gradient:
     key0:
       serializedVersion: 2
-      rgba: 4288782753
+      rgba: 4285822068
     key1:
       serializedVersion: 2
-      rgba: 4294967295
+      rgba: 4289638062
     key2:
       serializedVersion: 2
-      rgba: 0
+      rgba: 10592673
     key3:
       serializedVersion: 2
       rgba: 0
@@ -12959,8 +12964,8 @@ MonoBehaviour:
       serializedVersion: 2
       rgba: 0
     ctime0: 0
-    ctime1: 65535
-    ctime2: 0
+    ctime1: 31033
+    ctime2: 65535
     ctime3: 0
     ctime4: 0
     ctime5: 0
@@ -12974,7 +12979,7 @@ MonoBehaviour:
     atime5: 0
     atime6: 0
     atime7: 0
-    m_NumColorKeys: 2
+    m_NumColorKeys: 3
     m_NumAlphaKeys: 2
   target:
     m_PersistentCalls:

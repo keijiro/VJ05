@@ -55,6 +55,11 @@ namespace Kvant
             set { _positionNoiseMode = value; }
         }
 
+        public int positionNoiseModeInt {
+            get { return (int)_positionNoiseMode; }
+            set { _positionNoiseMode = (PositionNoiseMode)value; }
+        }
+
         [SerializeField]
         float _positionNoiseAmplitude = 5.0f;
 

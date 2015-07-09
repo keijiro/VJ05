@@ -8,7 +8,7 @@ Material:
   m_PrefabInternal: {fileID: 0}
   m_Name: Ground Wall
   m_Shader: {fileID: 4800000, guid: 1ded3f0cc90114d1c9b7431b375d82e2, type: 3}
-  m_ShaderKeywords: _ALBEDOMAP _RANDOMUV_ON
+  m_ShaderKeywords: _ALBEDOMAP _NORMALMAP _RANDOMUV_ON
   m_LightmapFlags: 5
   m_CustomRenderQueue: -1
   stringTagMap: {}
@@ -20,7 +20,7 @@ Material:
           name: _MainTex
         second:
           m_Texture: {fileID: 2800000, guid: 25ed1aa944dc648b182e752c739ed0b3, type: 3}
-          m_Scale: {x: 1, y: 1}
+          m_Scale: {x: .200000003, y: .200000003}
           m_Offset: {x: 0, y: 0}
       data:
         first:
@@ -33,7 +33,7 @@ Material:
         first:
           name: _NormalMap
         second:
-          m_Texture: {fileID: 0}
+          m_Texture: {fileID: 2800000, guid: 31d23e3e29ff644c3ae243cf35afcc5d, type: 3}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
       data:
@@ -122,7 +122,7 @@ Material:
       data:
         first:
           name: _Smoothness
-        second: .200000003
+        second: .221000001
       data:
         first:
           name: _Parallax
@@ -158,14 +158,10 @@ Material:
       data:
         first:
           name: _Metallic
-        second: .123999998
+        second: .476999998
       data:
         first:
           name: _OcclusionStr
-        second: 1
-      data:
-        first:
-          name: _NormalScale
         second: 1
       data:
         first:
@@ -175,6 +171,10 @@ Material:
         first:
           name: _RandomUV
         second: 1
+      data:
+        first:
+          name: _NormalScale
+        second: .219999999
     m_Colors:
       data:
         first:
@@ -183,8 +183,8 @@ Material:
       data:
         first:
           name: _Color
-        second: {r: .308823526, g: .265679061, b: .265679061, a: 1}
+        second: {r: .224264711, g: .232961461, b: .25, a: 1}
       data:
         first:
           name: _Color2
-        second: {r: .558823526, g: .558823526, b: .558823526, a: 1}
+        second: {r: .514705896, g: .514705896, b: .514705896, a: 1}

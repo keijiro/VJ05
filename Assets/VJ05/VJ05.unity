@@ -611,6 +611,217 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2091280814}
   m_RootOrder: 0
+--- !u!1 &195886556
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 195886558}
+  - 108: {fileID: 195886557}
+  - 114: {fileID: 195886559}
+  - 114: {fileID: 195886560}
+  m_Layer: 0
+  m_Name: Point light
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!108 &195886557
+Light:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 195886556}
+  m_Enabled: 1
+  serializedVersion: 6
+  m_Type: 2
+  m_Color: {r: 1, g: .132352948, b: .437524945, a: 1}
+  m_Intensity: 1.39999998
+  m_Range: 25.2900009
+  m_SpotAngle: 30
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: -1
+    m_Strength: 1
+    m_Bias: .0500000007
+    m_NormalBias: .400000006
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_Lightmapping: 4
+  m_BounceIntensity: 0
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
+  m_AreaSize: {x: 1, y: 1}
+--- !u!4 &195886558
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 195886556}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 681798442}
+  m_RootOrder: 0
+--- !u!114 &195886559
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 195886556}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43cb2331231cf48f5bcd3aa4030ea802, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  reaktor:
+    _mode: 1
+    _reference: {fileID: 0}
+    _name: 
+    _forceUpdate: 0
+  intensity:
+    enabled: 1
+    min: 0
+    max: 1.39999998
+    curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 1
+        tangentMode: 0
+      - time: 1
+        value: 1
+        inSlope: 1
+        outSlope: 0
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+  enableColor: 0
+  colorGradient:
+    key0:
+      serializedVersion: 2
+      rgba: 4294967295
+    key1:
+      serializedVersion: 2
+      rgba: 4294967295
+    key2:
+      serializedVersion: 2
+      rgba: 0
+    key3:
+      serializedVersion: 2
+      rgba: 0
+    key4:
+      serializedVersion: 2
+      rgba: 0
+    key5:
+      serializedVersion: 2
+      rgba: 0
+    key6:
+      serializedVersion: 2
+      rgba: 0
+    key7:
+      serializedVersion: 2
+      rgba: 0
+    ctime0: 0
+    ctime1: 65535
+    ctime2: 0
+    ctime3: 0
+    ctime4: 0
+    ctime5: 0
+    ctime6: 0
+    ctime7: 0
+    atime0: 0
+    atime1: 65535
+    atime2: 0
+    atime3: 0
+    atime4: 0
+    atime5: 0
+    atime6: 0
+    atime7: 0
+    m_NumColorKeys: 2
+    m_NumAlphaKeys: 2
+--- !u!114 &195886560
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 195886556}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcbea1f4bc98b455093b3b4b607ed9fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  reaktor:
+    _mode: 1
+    _reference: {fileID: 0}
+    _name: 
+    _forceUpdate: 0
+  optionType: 0
+  curve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: Infinity
+      outSlope: Infinity
+      tangentMode: 31
+    - time: .00999999978
+      value: 1
+      inSlope: Infinity
+      outSlope: Infinity
+      tangentMode: 31
+    - time: 1
+      value: 1
+      inSlope: Infinity
+      outSlope: Infinity
+      tangentMode: 31
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  origin: {x: 0, y: 0, z: 0}
+  direction: {x: 1, y: 0, z: 0}
+  boolTarget:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 195886557}
+        m_MethodName: set_enabled
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: Reaktion.GenericCurveGear+BoolEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  intTarget:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Reaktion.GenericCurveGear+IntEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  floatTarget:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Reaktion.GenericCurveGear+FloatEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  vectorTarget:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Reaktion.GenericCurveGear+VectorEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1 &197522614
 GameObject:
   m_ObjectHideFlags: 0
@@ -1047,6 +1258,267 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   limitAngle: {x: 0, y: 0, z: 15}
   linkedTo: {fileID: 0}
+--- !u!1 &229518956
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 229518957}
+  - 114: {fileID: 229518960}
+  - 114: {fileID: 229518959}
+  - 114: {fileID: 229518958}
+  m_Layer: 0
+  m_Name: Ground Wall Move
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &229518957
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 229518956}
+  m_LocalRotation: {x: .707106829, y: 0, z: 0, w: .707106709}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2022798588}
+  m_RootOrder: 1
+--- !u!114 &229518958
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 229518956}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcbea1f4bc98b455093b3b4b607ed9fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  reaktor:
+    _mode: 1
+    _reference: {fileID: 0}
+    _name: 
+    _forceUpdate: 0
+  optionType: 2
+  curve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 2
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: .5
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 5
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  origin: {x: 0, y: 0, z: 0}
+  direction: {x: 1, y: 0, z: 0}
+  boolTarget:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Reaktion.GenericCurveGear+BoolEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  intTarget:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Reaktion.GenericCurveGear+IntEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  floatTarget:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2022798587}
+        m_MethodName: set_positionNoiseAmplitude
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: Reaktion.GenericCurveGear+FloatEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  vectorTarget:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Reaktion.GenericCurveGear+VectorEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!114 &229518959
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 229518956}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcbea1f4bc98b455093b3b4b607ed9fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  reaktor:
+    _mode: 1
+    _reference: {fileID: 0}
+    _name: 
+    _forceUpdate: 0
+  optionType: 1
+  curve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: Infinity
+      outSlope: Infinity
+      tangentMode: 31
+    - time: .5
+      value: 3
+      inSlope: Infinity
+      outSlope: Infinity
+      tangentMode: 31
+    - time: 1
+      value: 3
+      inSlope: Infinity
+      outSlope: Infinity
+      tangentMode: 31
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  origin: {x: 0, y: 0, z: 0}
+  direction: {x: 1, y: 0, z: 0}
+  boolTarget:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Reaktion.GenericCurveGear+BoolEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  intTarget:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2022798587}
+        m_MethodName: set_positionNoiseModeInt
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: Reaktion.GenericCurveGear+IntEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  floatTarget:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2022798587}
+        m_MethodName: set_rotationNoiseAmplitude
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: Reaktion.GenericCurveGear+FloatEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  vectorTarget:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Reaktion.GenericCurveGear+VectorEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!114 &229518960
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 229518956}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a3ec3ae67a0841d8aa990e0f2e1089e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  injector:
+    _mode: 0
+    _reference: {fileID: 0}
+    _name: 
+    _forceUpdate: 1
+  audioCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 1
+      tangentMode: 0
+    - time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  gain:
+    _control: 0
+    _midiChannel: 16
+    _knobIndex: 2
+    _noteNumber: 40
+    _inputAxis: Jump
+    _curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 1
+        tangentMode: 0
+      - time: 1
+        value: 1
+        inSlope: 1
+        outSlope: 0
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+  offset:
+    _control: 1
+    _midiChannel: 16
+    _knobIndex: 21
+    _noteNumber: 40
+    _inputAxis: Jump
+    _curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 1
+        tangentMode: 0
+      - time: 1
+        value: 1
+        inSlope: 1
+        outSlope: 0
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+  sensitivity: .200000003
+  decaySpeed: 1
+  showAudioOptions: 0
+  headroom: 1
+  dynamicRange: 17
+  lowerBound: -60
+  falldown: .5
 --- !u!1 &261630690
 GameObject:
   m_ObjectHideFlags: 0
@@ -1454,22 +1926,22 @@ MonoBehaviour:
   _rows: 100
   _extent: {x: 200, y: 200}
   _offset: {x: 0, y: 0}
-  _positionNoiseMode: 2
-  _positionNoiseAmplitude: .519999981
+  _positionNoiseMode: 0
+  _positionNoiseAmplitude: 0
   _positionNoiseFrequency: 1
   _positionNoiseSpeed: .5
   _rotationNoiseMode: 4
-  _rotationNoiseAmplitude: 160
-  _rotationNoiseFrequency: .189999998
-  _rotationNoiseSpeed: .200000003
+  _rotationNoiseAmplitude: 180
+  _rotationNoiseFrequency: .180000007
+  _rotationNoiseSpeed: .370999992
   _scaleNoiseMode: 1
   _scaleNoiseAmplitude: 1
-  _scaleNoiseFrequency: .200000003
-  _scaleNoiseSpeed: .560000002
+  _scaleNoiseFrequency: .0896999985
+  _scaleNoiseSpeed: .5
   _shapes: []
-  _baseScale: {x: 2, y: 2, z: 2}
-  _minRandomScale: 1.79999995
-  _maxRandomScale: 2
+  _baseScale: {x: 1.99999988, y: 1.99999988, z: 1.99999988}
+  _minRandomScale: 1.39999998
+  _maxRandomScale: 1.60000002
   _material: {fileID: 2100000, guid: 36f129272d7c38446946908d69f36ebc, type: 2}
   _castShadows: 0
   _receiveShadows: 1
@@ -1617,7 +2089,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
   origin: {x: 0, y: 0, z: 0}
-  direction: {x: 1, y: 1, z: 1}
+  direction: {x: 2, y: 2, z: 2}
   boolTarget:
     m_PersistentCalls:
       m_Calls: []
@@ -2783,8 +3255,9 @@ GameObject:
   - 114: {fileID: 597244028}
   - 114: {fileID: 597244027}
   - 114: {fileID: 597244032}
-  - 114: {fileID: 597244031}
   - 114: {fileID: 597244030}
+  - 114: {fileID: 597244033}
+  - 114: {fileID: 597244031}
   m_Layer: 0
   m_Name: Squamata
   m_TagString: Untagged
@@ -2839,7 +3312,7 @@ Transform:
   m_GameObject: {fileID: 597244026}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.39999998, y: 1.39999998, z: 1.39999998}
+  m_LocalScale: {x: 1.79999995, y: 1.79999995, z: 1.79999995}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 10
@@ -2973,26 +3446,26 @@ MonoBehaviour:
     randomness: 0
   scale:
     mode: 4
-    min: 0
-    max: 1
+    min: 3.4000001
+    max: 1.70000005
     curve:
       serializedVersion: 2
       m_Curve:
       - time: 0
         value: 0
         inSlope: 0
-        outSlope: 1
+        outSlope: 0
         tangentMode: 0
       - time: 1
         value: 1
-        inSlope: 1
+        inSlope: 0
         outSlope: 0
         tangentMode: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
     arbitraryVector: {x: 1, y: 1, z: 1}
     randomness: 0
-  addInitialValue: 1
+  addInitialValue: 0
 --- !u!114 &597244032
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3073,6 +3546,71 @@ MonoBehaviour:
   dynamicRange: 17
   lowerBound: -60
   falldown: .5
+--- !u!114 &597244033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 597244026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcbea1f4bc98b455093b3b4b607ed9fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  reaktor:
+    _mode: 1
+    _reference: {fileID: 0}
+    _name: 
+    _forceUpdate: 0
+  optionType: 2
+  curve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: .600000024
+      outSlope: .600000024
+      tangentMode: 10
+    - time: 1
+      value: .600000024
+      inSlope: .600000024
+      outSlope: .600000024
+      tangentMode: 10
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  origin: {x: 0, y: 0, z: 0}
+  direction: {x: 1, y: 0, z: 0}
+  boolTarget:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Reaktion.GenericCurveGear+BoolEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  intTarget:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Reaktion.GenericCurveGear+IntEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  floatTarget:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 597244028}
+        m_MethodName: set_opacity
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: Reaktion.GenericCurveGear+FloatEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  vectorTarget:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Reaktion.GenericCurveGear+VectorEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1 &624098795
 GameObject:
   m_ObjectHideFlags: 0
@@ -3727,7 +4265,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: .300000012, y: .300000012, z: .300000012}
-  m_Children: []
+  m_Children:
+  - {fileID: 195886558}
   m_Father: {fileID: 0}
   m_RootOrder: 9
 --- !u!114 &681798443
@@ -5308,6 +5847,180 @@ SkinnedMeshRenderer:
     m_Center: {x: 0, y: .42405498, z: -.0210055411}
     m_Extent: {x: .23959285, y: .178905845, z: .195819587}
   m_DirtyAABB: 0
+--- !u!1 &899357704
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 899357705}
+  - 114: {fileID: 899357707}
+  - 114: {fileID: 899357706}
+  m_Layer: 0
+  m_Name: Ground Wall Rot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &899357705
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 899357704}
+  m_LocalRotation: {x: .707106829, y: 0, z: 0, w: .707106709}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2022798588}
+  m_RootOrder: 0
+--- !u!114 &899357706
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 899357704}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcbea1f4bc98b455093b3b4b607ed9fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  reaktor:
+    _mode: 1
+    _reference: {fileID: 0}
+    _name: 
+    _forceUpdate: 0
+  optionType: 2
+  curve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 120
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  origin: {x: 0, y: 0, z: 0}
+  direction: {x: 1, y: 0, z: 0}
+  boolTarget:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Reaktion.GenericCurveGear+BoolEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  intTarget:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Reaktion.GenericCurveGear+IntEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  floatTarget:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2022798587}
+        m_MethodName: set_rotationNoiseAmplitude
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: Reaktion.GenericCurveGear+FloatEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  vectorTarget:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Reaktion.GenericCurveGear+VectorEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!114 &899357707
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 899357704}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a3ec3ae67a0841d8aa990e0f2e1089e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  injector:
+    _mode: 0
+    _reference: {fileID: 0}
+    _name: 
+    _forceUpdate: 1
+  audioCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 1
+      tangentMode: 0
+    - time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  gain:
+    _control: 0
+    _midiChannel: 16
+    _knobIndex: 2
+    _noteNumber: 40
+    _inputAxis: Jump
+    _curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 1
+        tangentMode: 0
+      - time: 1
+        value: 1
+        inSlope: 1
+        outSlope: 0
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+  offset:
+    _control: 1
+    _midiChannel: 16
+    _knobIndex: 20
+    _noteNumber: 40
+    _inputAxis: Jump
+    _curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 1
+        tangentMode: 0
+      - time: 1
+        value: 1
+        inSlope: 1
+        outSlope: 0
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+  sensitivity: .200000003
+  decaySpeed: 1
+  showAudioOptions: 0
+  headroom: 1
+  dynamicRange: 17
+  lowerBound: -60
+  falldown: .5
 --- !u!1 &911252936
 GameObject:
   m_ObjectHideFlags: 0
@@ -13342,8 +14055,8 @@ MonoBehaviour:
   _positionNoiseSpeed: .200000003
   _rotationNoiseMode: 4
   _rotationNoiseAmplitude: 120
-  _rotationNoiseFrequency: .0399999991
-  _rotationNoiseSpeed: .5
+  _rotationNoiseFrequency: .0329999998
+  _rotationNoiseSpeed: .310000002
   _scaleNoiseMode: 1
   _scaleNoiseAmplitude: 1
   _scaleNoiseFrequency: .0500000007
@@ -13369,7 +14082,9 @@ Transform:
   m_LocalRotation: {x: -.707106829, y: 0, z: 0, w: .707106709}
   m_LocalPosition: {x: 0, y: -2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 899357705}
+  - {fileID: 229518957}
   m_Father: {fileID: 1330072422}
   m_RootOrder: 1
 --- !u!114 &2022798589

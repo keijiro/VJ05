@@ -45,14 +45,14 @@ Material:
           m_Offset: {x: 0, y: 0}
       data:
         first:
-          name: _OcclusionMap
+          name: _ParallaxMap
         second:
           m_Texture: {fileID: 0}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
       data:
         first:
-          name: _ParallaxMap
+          name: _OcclusionMap
         second:
           m_Texture: {fileID: 0}
           m_Scale: {x: 1, y: 1}
@@ -122,19 +122,7 @@ Material:
       data:
         first:
           name: _Smoothness
-        second: .171000004
-      data:
-        first:
-          name: _Metallic
-        second: .181999996
-      data:
-        first:
-          name: _NormalScale
-        second: 1
-      data:
-        first:
-          name: _OcclusionStr
-        second: 1
+        second: .185000002
       data:
         first:
           name: _Parallax
@@ -169,11 +157,23 @@ Material:
         second: 0
       data:
         first:
+          name: _Metallic
+        second: .851000011
+      data:
+        first:
+          name: _OcclusionStr
+        second: 1
+      data:
+        first:
           name: _ColorMode
         second: 1
       data:
         first:
           name: _RandomUV
+        second: 1
+      data:
+        first:
+          name: _NormalScale
         second: 1
     m_Colors:
       data:
@@ -183,8 +183,8 @@ Material:
       data:
         first:
           name: _Color
-        second: {r: .176470578, g: .12716262, b: .12716262, a: 1}
+        second: {r: .183823526, g: .164900512, b: .164900512, a: 1}
       data:
         first:
           name: _Color2
-        second: {r: .367647052, g: .367647052, b: .367647052, a: 1}
+        second: {r: .213235319, g: .213235319, b: .213235319, a: 1}

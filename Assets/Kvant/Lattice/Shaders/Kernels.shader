@@ -32,8 +32,8 @@ Shader "Hidden/Kvant/Lattice/Kernels"
 
         float3 nc1 = float3((vp + _Offset) * _Frequency, _Time.x);
     #if ENABLE_WARP
-        float2 nc2 = nc1 + float2(124.343, 311.591);
-        float2 nc3 = nc1 + float2(273.534, 178.392);
+        float3 nc2 = nc1 + float3(124.343, 311.591, 0);
+        float3 nc3 = nc1 + float3(273.534, 178.392, 0);
     #endif
 
         float3 np = float3(100000, 100000, 100000);

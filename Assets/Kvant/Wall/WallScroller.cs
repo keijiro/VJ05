@@ -12,6 +12,11 @@ namespace Kvant
         public float yawAngle;
         public float speed;
 
+        public float Speed {
+            get { return speed; }
+            set { speed = value; }
+        }
+
         void Update()
         {
             var r = yawAngle * Mathf.Deg2Rad;

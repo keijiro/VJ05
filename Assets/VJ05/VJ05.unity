@@ -4221,11 +4221,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 681798442}
-  - 114: {fileID: 681798441}
-  - 114: {fileID: 681798443}
   - 114: {fileID: 681798446}
-  - 114: {fileID: 681798445}
-  - 114: {fileID: 681798444}
   m_Layer: 0
   m_Name: Heart
   m_TagString: Untagged
@@ -4233,29 +4229,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &681798441
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 681798440}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 69e01be7c81bd45bba0406870c1e30ca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _subdivision: 1
-  _waveSpeed: 8
-  _waveAlpha: 1
-  _waveBeta: 1
-  _cutoff: 0
-  _noiseAmplitude: 2
-  _noiseExponent: 1
-  _noiseFrequency: .400000006
-  _noiseSpeed: 2
-  _material: {fileID: 2100000, guid: c1c6493f12b984584903bf3cea8b83cd, type: 2}
-  _receiveShadows: 1
-  _shadowCastingMode: 1
 --- !u!4 &681798442
 Transform:
   m_ObjectHideFlags: 0
@@ -4264,180 +4237,13 @@ Transform:
   m_GameObject: {fileID: 681798440}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: .300000012, y: .300000012, z: .300000012}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 195886558}
+  - {fileID: 1264701762}
+  - {fileID: 1110777841}
   m_Father: {fileID: 0}
   m_RootOrder: 9
---- !u!114 &681798443
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 681798440}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d637268abbbb5428e991dd9ec93136f2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  positionFrequency: .200000003
-  rotationFrequency: .200000003
-  positionAmount: 0
-  rotationAmount: 240
-  positionComponents: {x: 1, y: 1, z: 1}
-  rotationComponents: {x: 1, y: 1, z: 1}
-  positionOctave: 3
-  rotationOctave: 3
---- !u!114 &681798444
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 681798440}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fcbea1f4bc98b455093b3b4b607ed9fc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  reaktor:
-    _mode: 1
-    _reference: {fileID: 0}
-    _name: 
-    _forceUpdate: 0
-  optionType: 0
-  curve:
-    serializedVersion: 2
-    m_Curve:
-    - time: 0
-      value: 0
-      inSlope: Infinity
-      outSlope: Infinity
-      tangentMode: 31
-    - time: .00999999978
-      value: 1
-      inSlope: Infinity
-      outSlope: Infinity
-      tangentMode: 31
-    - time: 1
-      value: 1
-      inSlope: Infinity
-      outSlope: Infinity
-      tangentMode: 31
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-  origin: {x: 0, y: 0, z: 0}
-  direction: {x: 1, y: 0, z: 0}
-  boolTarget:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 681798441}
-        m_MethodName: set_enabled
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: Reaktion.GenericCurveGear+BoolEvent, Assembly-CSharp, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  intTarget:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: Reaktion.GenericCurveGear+IntEvent, Assembly-CSharp, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  floatTarget:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: Reaktion.GenericCurveGear+FloatEvent, Assembly-CSharp, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  vectorTarget:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: Reaktion.GenericCurveGear+VectorEvent, Assembly-CSharp, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
---- !u!114 &681798445
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 681798440}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2c73495c07c574c8888398de99a9c523, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  reaktor:
-    _mode: 1
-    _reference: {fileID: 0}
-    _name: 
-    _forceUpdate: 0
-  position:
-    mode: 0
-    min: 0
-    max: 1
-    curve:
-      serializedVersion: 2
-      m_Curve:
-      - time: 0
-        value: 0
-        inSlope: 0
-        outSlope: 1
-        tangentMode: 0
-      - time: 1
-        value: 1
-        inSlope: 1
-        outSlope: 0
-        tangentMode: 0
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-    arbitraryVector: {x: 0, y: 1, z: 0}
-    randomness: 0
-  rotation:
-    mode: 0
-    min: 0
-    max: 90
-    curve:
-      serializedVersion: 2
-      m_Curve:
-      - time: 0
-        value: 0
-        inSlope: 0
-        outSlope: 1
-        tangentMode: 0
-      - time: 1
-        value: 1
-        inSlope: 1
-        outSlope: 0
-        tangentMode: 0
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-    arbitraryVector: {x: 0, y: 1, z: 0}
-    randomness: 0
-  scale:
-    mode: 4
-    min: 0
-    max: 1
-    curve:
-      serializedVersion: 2
-      m_Curve:
-      - time: 0
-        value: 0
-        inSlope: 0
-        outSlope: 1
-        tangentMode: 0
-      - time: 1
-        value: 1
-        inSlope: 1
-        outSlope: 0
-        tangentMode: 0
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-    arbitraryVector: {x: 1, y: 1, z: 1}
-    randomness: 0
-  addInitialValue: 1
 --- !u!114 &681798446
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9101,6 +8907,138 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: Reaktion.GenericCurveGear+VectorEvent, Assembly-CSharp, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!1 &1110777839
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1110777841}
+  - 114: {fileID: 1110777840}
+  - 114: {fileID: 1110777842}
+  m_Layer: 0
+  m_Name: Heart Particle
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1110777840
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1110777839}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 051131338091a4b3d861d193e64fb704, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _maxParticles: 1000
+  _emitterCenter: {x: 0, y: 0, z: 0}
+  _emitterSize: {x: .5, y: .5, z: .5}
+  _throttle: 1
+  _minLife: .600000024
+  _maxLife: 2
+  _minSpeed: 0
+  _maxSpeed: 1.18181789
+  _direction: {x: 0, y: 0, z: 1}
+  _spread: 1
+  _minSpin: 30
+  _maxSpin: 200
+  _noiseAmplitude: 1.10000002
+  _noiseFrequency: .800000012
+  _noiseSpeed: .699999988
+  _shapes:
+  - {fileID: 4300004, guid: 7977aa2e23a3b4949b0dec50b282bc9b, type: 3}
+  _minScale: .00999999978
+  _maxScale: .300000012
+  _material: {fileID: 2100000, guid: c508396535c754f3ca437376381f81c2, type: 2}
+  _castShadows: 0
+  _receiveShadows: 0
+  _randomSeed: 0
+  _debug: 0
+  _defaultMaterial: {fileID: 2100000, guid: e1aad33bf16194534a7c99e7c01a8249, type: 2}
+  _kernelShader: {fileID: 4800000, guid: 5e5e161a3708e40119404232637809fc, type: 3}
+  _debugShader: {fileID: 4800000, guid: ad2397ccf551046ecb4df814f027d430, type: 3}
+--- !u!4 &1110777841
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1110777839}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 681798442}
+  m_RootOrder: 2
+--- !u!114 &1110777842
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1110777839}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcbea1f4bc98b455093b3b4b607ed9fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  reaktor:
+    _mode: 1
+    _reference: {fileID: 0}
+    _name: 
+    _forceUpdate: 0
+  optionType: 2
+  curve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 1
+      tangentMode: 0
+    - time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  origin: {x: 0, y: 0, z: 0}
+  direction: {x: 1, y: 0, z: 0}
+  boolTarget:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Reaktion.GenericCurveGear+BoolEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  intTarget:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Reaktion.GenericCurveGear+IntEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  floatTarget:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1110777840}
+        m_MethodName: set_throttle
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: Reaktion.GenericCurveGear+FloatEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  vectorTarget:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Reaktion.GenericCurveGear+VectorEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1 &1123341294
 GameObject:
   m_ObjectHideFlags: 0
@@ -9519,6 +9457,229 @@ Transform:
   - {fileID: 1420781115}
   m_Father: {fileID: 1123341296}
   m_RootOrder: 0
+--- !u!1 &1264701757
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1264701762}
+  - 114: {fileID: 1264701761}
+  - 114: {fileID: 1264701760}
+  - 114: {fileID: 1264701759}
+  - 114: {fileID: 1264701758}
+  m_Layer: 0
+  m_Name: Heart Core
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1264701758
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1264701757}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcbea1f4bc98b455093b3b4b607ed9fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  reaktor:
+    _mode: 1
+    _reference: {fileID: 0}
+    _name: 
+    _forceUpdate: 0
+  optionType: 0
+  curve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: Infinity
+      outSlope: Infinity
+      tangentMode: 31
+    - time: .00999999978
+      value: 1
+      inSlope: Infinity
+      outSlope: Infinity
+      tangentMode: 31
+    - time: 1
+      value: 1
+      inSlope: Infinity
+      outSlope: Infinity
+      tangentMode: 31
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  origin: {x: 0, y: 0, z: 0}
+  direction: {x: 1, y: 0, z: 0}
+  boolTarget:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1264701761}
+        m_MethodName: set_enabled
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: Reaktion.GenericCurveGear+BoolEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  intTarget:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Reaktion.GenericCurveGear+IntEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  floatTarget:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Reaktion.GenericCurveGear+FloatEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  vectorTarget:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Reaktion.GenericCurveGear+VectorEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!114 &1264701759
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1264701757}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c73495c07c574c8888398de99a9c523, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  reaktor:
+    _mode: 1
+    _reference: {fileID: 0}
+    _name: 
+    _forceUpdate: 0
+  position:
+    mode: 0
+    min: 0
+    max: 1
+    curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 1
+        tangentMode: 0
+      - time: 1
+        value: 1
+        inSlope: 1
+        outSlope: 0
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    arbitraryVector: {x: 0, y: 1, z: 0}
+    randomness: 0
+  rotation:
+    mode: 0
+    min: 0
+    max: 90
+    curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 1
+        tangentMode: 0
+      - time: 1
+        value: 1
+        inSlope: 1
+        outSlope: 0
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    arbitraryVector: {x: 0, y: 1, z: 0}
+    randomness: 0
+  scale:
+    mode: 4
+    min: 0
+    max: 1
+    curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 1
+        tangentMode: 0
+      - time: 1
+        value: 1
+        inSlope: 1
+        outSlope: 0
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    arbitraryVector: {x: 1, y: 1, z: 1}
+    randomness: 0
+  addInitialValue: 1
+--- !u!114 &1264701760
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1264701757}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d637268abbbb5428e991dd9ec93136f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  positionFrequency: .200000003
+  rotationFrequency: .200000003
+  positionAmount: 0
+  rotationAmount: 240
+  positionComponents: {x: 1, y: 1, z: 1}
+  rotationComponents: {x: 1, y: 1, z: 1}
+  positionOctave: 3
+  rotationOctave: 3
+--- !u!114 &1264701761
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1264701757}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69e01be7c81bd45bba0406870c1e30ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _subdivision: 1
+  _waveSpeed: 8
+  _waveAlpha: 1
+  _waveBeta: 1
+  _cutoff: 0
+  _noiseAmplitude: 2
+  _noiseExponent: 1
+  _noiseFrequency: .400000006
+  _noiseSpeed: 2
+  _material: {fileID: 2100000, guid: c1c6493f12b984584903bf3cea8b83cd, type: 2}
+  _receiveShadows: 1
+  _shadowCastingMode: 1
+--- !u!4 &1264701762
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1264701757}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: .300000012, y: .300000012, z: .300000012}
+  m_Children: []
+  m_Father: {fileID: 681798442}
+  m_RootOrder: 1
 --- !u!1 &1264969223
 GameObject:
   m_ObjectHideFlags: 0

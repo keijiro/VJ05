@@ -1,0 +1,68 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Heart Particles
+  m_Shader: {fileID: 4800000, guid: fc11471c70ec2478f80b9434bf45d6c1, type: 3}
+  m_ShaderKeywords: _COLORMODE_ANIMATE
+  m_LightmapFlags: 5
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+      data:
+        first:
+          name: _MainTex
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _PositionBuffer
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _RotationBuffer
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+    m_Floats:
+      data:
+        first:
+          name: _ColorMode
+        second: 1
+      data:
+        first:
+          name: _ScaleMin
+        second: 1
+      data:
+        first:
+          name: _ScaleMax
+        second: 1
+      data:
+        first:
+          name: _RandomSeed
+        second: 0
+      data:
+        first:
+          name: _BlendMode
+        second: 0
+    m_Colors:
+      data:
+        first:
+          name: _Color
+        second: {r: 1.39300001, g: .256074071, b: .655961156, a: 1}
+      data:
+        first:
+          name: _Color2
+        second: {r: .882356465, g: .434700578, b: .462486506, a: .550000012}

@@ -151,7 +151,7 @@ Material:
       data:
         first:
           name: _Metallic
-        second: .476000011
+        second: .851999998
       data:
         first:
           name: _OcclusionStr
@@ -172,4 +172,4 @@ Material:
       data:
         first:
           name: _Color
-        second: {r: .141435981, g: .148926139, b: .176470578, a: 1}
+        second: {r: .360294104, g: .360294104, b: .360294104, a: 1}

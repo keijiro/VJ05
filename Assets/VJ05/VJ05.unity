@@ -87,180 +87,6 @@ NavMeshSettings:
     cellSize: .166666672
     manualCellSize: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &2168914
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 2168915}
-  - 114: {fileID: 2168917}
-  - 114: {fileID: 2168916}
-  m_Layer: 0
-  m_Name: Bloom
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2168915
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2168914}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 146600748}
-  m_RootOrder: 0
---- !u!114 &2168916
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2168914}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fcbea1f4bc98b455093b3b4b607ed9fc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  reaktor:
-    _mode: 1
-    _reference: {fileID: 0}
-    _name: 
-    _forceUpdate: 0
-  optionType: 2
-  curve:
-    serializedVersion: 2
-    m_Curve:
-    - time: 0
-      value: .0799999982
-      inSlope: 1.91999996
-      outSlope: 1.91999996
-      tangentMode: 10
-    - time: 1
-      value: 2
-      inSlope: 1.91999996
-      outSlope: 1.91999996
-      tangentMode: 10
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-  origin: {x: 0, y: 0, z: 0}
-  direction: {x: 1, y: 0, z: 0}
-  boolTarget:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: Reaktion.GenericCurveGear+BoolEvent, Assembly-CSharp, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  intTarget:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: Reaktion.GenericCurveGear+IntEvent, Assembly-CSharp, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  floatTarget:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1428037892}
-        m_MethodName: set_masterAmount
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: Reaktion.GenericCurveGear+FloatEvent, Assembly-CSharp, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  vectorTarget:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: Reaktion.GenericCurveGear+VectorEvent, Assembly-CSharp, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
---- !u!114 &2168917
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2168914}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a3ec3ae67a0841d8aa990e0f2e1089e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  injector:
-    _mode: 0
-    _reference: {fileID: 0}
-    _name: 
-    _forceUpdate: 1
-  audioCurve:
-    serializedVersion: 2
-    m_Curve:
-    - time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 1
-      tangentMode: 0
-    - time: 1
-      value: 1
-      inSlope: 1
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-  gain:
-    _control: 0
-    _midiChannel: 16
-    _knobIndex: 2
-    _noteNumber: 40
-    _inputAxis: Jump
-    _curve:
-      serializedVersion: 2
-      m_Curve:
-      - time: 0
-        value: 0
-        inSlope: 0
-        outSlope: 1
-        tangentMode: 0
-      - time: 1
-        value: 1
-        inSlope: 1
-        outSlope: 0
-        tangentMode: 0
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-  offset:
-    _control: 1
-    _midiChannel: 16
-    _knobIndex: 78
-    _noteNumber: 40
-    _inputAxis: Jump
-    _curve:
-      serializedVersion: 2
-      m_Curve:
-      - time: 0
-        value: 0
-        inSlope: 0
-        outSlope: 1
-        tangentMode: 0
-      - time: 1
-        value: 1
-        inSlope: 1
-        outSlope: 0
-        tangentMode: 0
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-  sensitivity: .949999988
-  decaySpeed: 1
-  showAudioOptions: 0
-  headroom: 1
-  dynamicRange: 17
-  lowerBound: -60
-  falldown: .5
 --- !u!1 &81390793
 GameObject:
   m_ObjectHideFlags: 0
@@ -577,7 +403,6 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 2168915}
   - {fileID: 1077144819}
   - {fileID: 1516649699}
   - {fileID: 1024339544}
@@ -3645,7 +3470,7 @@ MonoBehaviour:
   _columns: 50
   _rows: 50
   _extent: {x: 100, y: 100}
-  _offset: {x: 30.7052765, y: -948.664917}
+  _offset: {x: 0, y: 0}
   _positionNoiseMode: 2
   _positionNoiseAmplitude: 8
   _positionNoiseFrequency: .200000003
@@ -4614,24 +4439,24 @@ MonoBehaviour:
   _emitterCenter: {x: 0, y: 0, z: 0}
   _emitterSize: {x: 30, y: 30, z: 1}
   _throttle: 1
-  _minLife: 2.4848485
-  _maxLife: 3.99999905
-  _minSpeed: 5.78787899
-  _maxSpeed: 19.242424
+  _minLife: 2.5
+  _maxLife: 4
+  _minSpeed: 6
+  _maxSpeed: 19
   _direction: {x: 0, y: 0, z: 1}
   _spread: .116999999
   _minSpin: 287.575775
   _maxSpin: 503.03009
-  _noiseAmplitude: .5
-  _noiseFrequency: .179000005
+  _noiseAmplitude: 1
+  _noiseFrequency: .180000007
   _noiseSpeed: 1
   _shapes:
   - {fileID: 4300006, guid: d156dcf56f86f404393203fbed35c031, type: 3}
   - {fileID: 4300004, guid: d156dcf56f86f404393203fbed35c031, type: 3}
   - {fileID: 4300002, guid: d156dcf56f86f404393203fbed35c031, type: 3}
   - {fileID: 4300000, guid: d156dcf56f86f404393203fbed35c031, type: 3}
-  _minScale: .8176651
-  _maxScale: 1.615695
+  _minScale: .800000012
+  _maxScale: 1.60000002
   _material: {fileID: 2100000, guid: 08b11f9fafba144d88c0bb77d240f827, type: 2}
   _castShadows: 1
   _receiveShadows: 1
@@ -4869,7 +4694,7 @@ Transform:
   - {fileID: 1785697446}
   - {fileID: 1002730034}
   m_Father: {fileID: 146600748}
-  m_RootOrder: 4
+  m_RootOrder: 3
 --- !u!114 &747973408
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7798,7 +7623,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 146600748}
-  m_RootOrder: 3
+  m_RootOrder: 2
 --- !u!114 &1024339545
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8119,7 +7944,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 146600748}
-  m_RootOrder: 1
+  m_RootOrder: 0
 --- !u!114 &1077144820
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10049,27 +9874,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 051131338091a4b3d861d193e64fb704, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _maxParticles: 4000
+  _maxParticles: 8000
   _emitterCenter: {x: 0, y: 0, z: 0}
   _emitterSize: {x: 8, y: 5, z: .400000006}
   _throttle: .400000006
   _minLife: 1
   _maxLife: 2.5
-  _minSpeed: 2.27272725
-  _maxSpeed: 4.27272797
+  _minSpeed: 2.20000005
+  _maxSpeed: 4.19999981
   _direction: {x: 0, y: 0, z: 1}
   _spread: 0
   _minSpin: 236.833969
   _maxSpin: 400.599426
   _noiseAmplitude: 1.10000002
-  _noiseFrequency: .398999989
+  _noiseFrequency: .400000006
   _noiseSpeed: .600000024
   _shapes:
   - {fileID: 4300006, guid: d156dcf56f86f404393203fbed35c031, type: 3}
   - {fileID: 4300000, guid: d156dcf56f86f404393203fbed35c031, type: 3}
   - {fileID: 4300004, guid: d156dcf56f86f404393203fbed35c031, type: 3}
   _minScale: .00999999978
-  _maxScale: .261082172
+  _maxScale: .25999999
   _material: {fileID: 2100000, guid: b85e7fe39619c4f88810b3503fa3a5bc, type: 2}
   _castShadows: 1
   _receiveShadows: 1
@@ -11607,7 +11432,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tweakMode: 1
   Threshold: .600000024
-  MasterAmount: .0799999982
+  MasterAmount: .0900000036
   MediumAmount: .200000003
   LargeAmount: 2
   Tint: {r: 1, g: 1, b: 1, a: 1}
@@ -12107,7 +11932,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 146600748}
-  m_RootOrder: 2
+  m_RootOrder: 1
 --- !u!114 &1516649700
 MonoBehaviour:
   m_ObjectHideFlags: 0

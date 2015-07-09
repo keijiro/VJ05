@@ -2486,13 +2486,13 @@ MonoBehaviour:
     m_Curve:
     - time: 0
       value: 0
-      inSlope: 3.79999995
-      outSlope: 3.79999995
+      inSlope: 8
+      outSlope: 8
       tangentMode: 10
     - time: 1
-      value: 3.79999995
-      inSlope: 3.79999995
-      outSlope: 3.79999995
+      value: 8
+      inSlope: 8
+      outSlope: 8
       tangentMode: 10
     m_PreInfinity: 2
     m_PostInfinity: 2
@@ -2612,10 +2612,10 @@ MonoBehaviour:
         tangentMode: 21
       m_PreInfinity: 2
       m_PostInfinity: 2
-  sensitivity: .99000001
-  decaySpeed: .839999974
-  showAudioOptions: 0
-  headroom: 1
+  sensitivity: 1
+  decaySpeed: .180000007
+  showAudioOptions: 1
+  headroom: 0
   dynamicRange: 17
   lowerBound: -60
   falldown: .5
@@ -2833,7 +2833,7 @@ MonoBehaviour:
       rgba: 5921535
     key1:
       serializedVersion: 2
-      rgba: 2287622911
+      rgba: 4280427263
     key2:
       serializedVersion: 2
       rgba: 0
@@ -2861,7 +2861,7 @@ MonoBehaviour:
     ctime6: 0
     ctime7: 0
     atime0: 655
-    atime1: 29491
+    atime1: 65535
     atime2: 0
     atime3: 0
     atime4: 0
@@ -7274,7 +7274,7 @@ MonoBehaviour:
       rgba: 5921535
     key1:
       serializedVersion: 2
-      rgba: 2287622911
+      rgba: 4279703551
     key2:
       serializedVersion: 2
       rgba: 0
@@ -7302,7 +7302,7 @@ MonoBehaviour:
     ctime6: 0
     ctime7: 0
     atime0: 655
-    atime1: 29491
+    atime1: 65535
     atime2: 0
     atime3: 0
     atime4: 0
@@ -7440,7 +7440,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _subdivision: 3
   _noiseAmplitude: 3
-  _noiseExponent: 2.5
+  _noiseExponent: 3.5
   _noiseFrequency: 2.13000011
   _noiseSpeed: .100000001
   _material: {fileID: 2100000, guid: 6366653fc21554ef7b314d8220eadbc2, type: 2}
@@ -10721,10 +10721,10 @@ MonoBehaviour:
         tangentMode: 21
       m_PreInfinity: 2
       m_PostInfinity: 2
-  sensitivity: .99000001
-  decaySpeed: .839999974
-  showAudioOptions: 0
-  headroom: 1
+  sensitivity: 1
+  decaySpeed: .180000007
+  showAudioOptions: 1
+  headroom: 0
   dynamicRange: 17
   lowerBound: -60
   falldown: .5
@@ -10898,9 +10898,9 @@ MonoBehaviour:
       m_PostInfinity: 2
   sensitivity: 1
   decaySpeed: .200000003
-  showAudioOptions: 0
-  headroom: 1
-  dynamicRange: 17
+  showAudioOptions: 1
+  headroom: 0
+  dynamicRange: 16
   lowerBound: -60
   falldown: .5
 --- !u!114 &1785697449
@@ -11011,14 +11011,14 @@ MonoBehaviour:
     serializedVersion: 2
     m_Curve:
     - time: 0
-      value: .100000001
-      inSlope: .899999976
-      outSlope: .899999976
+      value: .199999988
+      inSlope: 1.29999995
+      outSlope: 1.29999995
       tangentMode: 10
     - time: 1
-      value: 1
-      inSlope: .899999976
-      outSlope: .899999976
+      value: 1.5
+      inSlope: 1.29999995
+      outSlope: 1.29999995
       tangentMode: 10
     m_PreInfinity: 2
     m_PostInfinity: 2

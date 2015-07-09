@@ -13,16 +13,18 @@ public class AnalogGlitchController : MonoBehaviour
     public float HorizontalShake { get; set; }
 
     float curveTime = 100;
+    float kickIntensity = 1;
 
-    public void Kick()
+    public void Kick(float intensity)
     {
+        kickIntensity = intensity;
         curveTime = 0;
     }
 
     void Update()
     {
-        var v1 = kickCurve1.Evaluate(curveTime);
-        var v2 = kickCurve2.Evaluate(curveTime);
+        var v1 = kickCurve1.Evaluate(curveTime) * kickIntensity;
+        var v2 = kickCurve2.Evaluate(curveTime) * kickIntensity;
 
         var sj = Mathf.Clamp01(v1 + ScanLineJitter);
         var cd = Mathf.Clamp01(v1 + ColorDrift);

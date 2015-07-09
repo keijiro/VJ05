@@ -55,6 +55,8 @@ Shader "Kvant/Tunnel/Surface"
         float3 _MapOffset; // hidden on inspector
         half _UseBuffer;   // hidden on inspector
 
+        half _Darken; // VJ05
+
         struct Input
         {
         #if _ALBEDOMAP || _NORMALMAP || _OCCLUSIONMAP
@@ -113,6 +115,7 @@ Shader "Kvant/Tunnel/Surface"
             o.Albedo = _Color.rgb;
             o.Alpha = _Color.a;
         #endif
+            o.Albedo = lerp(o.Albedo, (half3)0, _Darken);
 
         #if _NORMALMAP
             // Normal map

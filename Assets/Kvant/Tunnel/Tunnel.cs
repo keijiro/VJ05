@@ -345,6 +345,10 @@ namespace Kvant
             props1.SetFloat("_UseBuffer", 1);
             props2.SetFloat("_UseBuffer", 1);
 
+            // VJ05
+            props1.SetFloat("_Darken", _lineColor.a);
+            props2.SetFloat("_Darken", _lineColor.a);
+
             // Temporary variables.
             var mesh = _bulkMesh.mesh;
             var position = transform.position;

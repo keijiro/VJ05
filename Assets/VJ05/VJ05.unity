@@ -832,7 +832,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _maxParticles: 10000
   _emitterPosition: {x: 0, y: 0, z: 15}
-  _emitterSize: {x: 30, y: 30, z: 10}
+  _emitterSize: {x: 45, y: 45, z: 10}
   _throttle: 1
   _direction: {x: -0, y: -0, z: -1}
   _minSpeed: 9.53535366
@@ -11926,7 +11926,7 @@ MonoBehaviour:
       rgba: 4294967295
     key1:
       serializedVersion: 2
-      rgba: 4284703587
+      rgba: 4278190080
     key2:
       serializedVersion: 2
       rgba: 0

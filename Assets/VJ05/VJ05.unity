@@ -137,18 +137,13 @@ MonoBehaviour:
     serializedVersion: 2
     m_Curve:
     - time: 0
-      value: 2.13000011
+      value: 2.5
       inSlope: -3.26000023
-      outSlope: -3.26000023
-      tangentMode: 21
-    - time: .5
-      value: .5
-      inSlope: -3.26000023
-      outSlope: 7
+      outSlope: -2
       tangentMode: 21
     - time: 1
-      value: 4
-      inSlope: 7
+      value: .5
+      inSlope: -2
       outSlope: 7
       tangentMode: 21
     m_PreInfinity: 2
@@ -2487,13 +2482,13 @@ MonoBehaviour:
     m_Curve:
     - time: 0
       value: 0
-      inSlope: 8
-      outSlope: 8
+      inSlope: 10
+      outSlope: 10
       tangentMode: 10
     - time: 1
-      value: 8
-      inSlope: 8
-      outSlope: 8
+      value: 10
+      inSlope: 10
+      outSlope: 10
       tangentMode: 10
     m_PreInfinity: 2
     m_PostInfinity: 2
@@ -10509,7 +10504,7 @@ MonoBehaviour:
   _lineColor: {r: 0, g: 0, b: 0, a: .847000003}
   _filterStrength: 10
   _filterThreshold: .100000001
-  _fallOffDepth: 40
+  _fallOffDepth: 90
   _backgroundColor: {r: 1, g: 1, b: 1, a: .122000001}
   _shader: {fileID: 4800000, guid: b8cb1cfbd02c146ccbe95b4baf27a54e, type: 3}
 --- !u!114 &1428037891
@@ -14022,13 +14017,13 @@ MonoBehaviour:
     m_Curve:
     - time: 0
       value: .199999988
-      inSlope: 1.29999995
-      outSlope: 1.29999995
+      inSlope: 1.79999995
+      outSlope: 1.79999995
       tangentMode: 10
     - time: 1
-      value: 1.5
-      inSlope: 1.29999995
-      outSlope: 1.29999995
+      value: 2
+      inSlope: 1.79999995
+      outSlope: 1.79999995
       tangentMode: 10
     m_PreInfinity: 2
     m_PostInfinity: 2
@@ -14097,7 +14092,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
   gain:
-    _control: 1
+    _control: 0
     _midiChannel: 16
     _knobIndex: 74
     _noteNumber: 40
@@ -14134,16 +14129,11 @@ MonoBehaviour:
       - time: 0
         value: 0
         inSlope: 0
-        outSlope: -0
-        tangentMode: 21
-      - time: .5
-        value: 0
-        inSlope: 0
-        outSlope: 9
+        outSlope: 4.5
         tangentMode: 21
       - time: 1
         value: 4.5
-        inSlope: 9
+        inSlope: 4.5
         outSlope: 2
         tangentMode: 21
       m_PreInfinity: 2

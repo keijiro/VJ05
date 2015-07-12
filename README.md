@@ -10,6 +10,8 @@ VJ05 is visual performance software, which was developed for [Katsuhiro Chiba]
 
 ![Screenshot](http://33.media.tumblr.com/f5118649ec5e2e3a7746efd7460fb177/tumblr_nr0q16peIY1qio469o1_400.gif)
 
+See more photos and videos from Channel #12 on [my Tumblr page][Tumblr].
+
 System Requirements
 -------------------
 
@@ -63,6 +65,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 [Chiba]: https://soundcloud.com/katsuhiro-chiba
 [Channel]: https://www.super-deluxe.com/news/111
+[Tumblr]: http://radiumsoftware.tumblr.com/tagged/channel12
 [DataRacket]: http://www.ethnotekh.com/software/data-racket/
 [Reaktion]: https://github.com/keijiro/Reaktion
 [Gasta]: http://www.gasta.org/wordpress/free-hdri-studio/

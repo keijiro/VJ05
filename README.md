@@ -1,8 +1,8 @@
 VJ05
 ====
 
-VJ05 is visual performance software, which was originally developed for
-[Katsuhiro Chiba][Chiba]’s live performance at [Channel #12][Channel].
+VJ05 is visual performance software, which was developed for [Katsuhiro Chiba]
+[Chiba]’s live performance at [Channel #12][Channel].
 
 ![Screenshot](http://41.media.tumblr.com/eeded4536096bb89ba63ed3bb60c99a4/tumblr_nr8y9hM3zn1qio469o1_400.png)
 

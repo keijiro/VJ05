@@ -29,14 +29,14 @@ window (from the main menu “Window” -> “Reaktion”).
 
 To check/configure the each controller, press the “select” button in the
 Reaktion window. It selects the controller component (Reaktor script) in
-the inspector, and you can check/edit the CC number.
+the inspector, and you can check/edit the CC number in it.
 
 ![Inspector](http://keijiro.github.io/VJ04/Inspector.png)
 
 Acknowledgements
 ----------------
 
-The HDR images under the Assets/Gasta directory are created by Nicola Gastaldi.
+The HDR images in the Assets/Gasta directory are created by Nicola Gastaldi.
 See [his page][Gasta] for further details.
 
 License

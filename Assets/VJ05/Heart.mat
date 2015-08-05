@@ -154,12 +154,12 @@ Material:
         second: {r: 1, g: 1, b: 1, a: 1}
       data:
         first:
-          name: _Color2
-        second: {r: 1, g: .125, b: .125, a: 1}
+          name: _Emission
+        second: {r: 4.4460001, g: 2.51723576, b: 3.11581492, a: 1}
       data:
         first:
-          name: _Emission
-        second: {r: 6.77399969, g: 3.8352797, b: 4.74729586, a: 1}
+          name: _Color2
+        second: {r: 1, g: .125, b: .125, a: 1}
       data:
         first:
           name: _Color1

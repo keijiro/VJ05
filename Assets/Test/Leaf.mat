@@ -115,7 +115,11 @@ Material:
       data:
         first:
           name: _Smoothness
-        second: .5
+        second: .620000005
+      data:
+        first:
+          name: _BumpScale
+        second: 1
       data:
         first:
           name: _Parallax
@@ -128,10 +132,6 @@ Material:
         first:
           name: _Glossiness
         second: .5
-      data:
-        first:
-          name: _BumpScale
-        second: 1
       data:
         first:
           name: _OcclusionStrength
@@ -151,7 +151,7 @@ Material:
       data:
         first:
           name: _Metallic
-        second: 0
+        second: .370000005
       data:
         first:
           name: _ColorMode
@@ -184,7 +184,7 @@ Material:
       data:
         first:
           name: _Color
-        second: {r: .323529422, g: 1, b: .41217047, a: 1}
+        second: {r: .53514272, g: .720588207, b: .559442639, a: 1}
       data:
         first:
           name: _Color2

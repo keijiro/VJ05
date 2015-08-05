@@ -104,6 +104,10 @@ Material:
         second: .314344943
       data:
         first:
+          name: _BumpScale
+        second: 1
+      data:
+        first:
           name: _Parallax
         second: .0199999996
       data:
@@ -114,10 +118,6 @@ Material:
         first:
           name: _Glossiness
         second: .899999976
-      data:
-        first:
-          name: _BumpScale
-        second: 1
       data:
         first:
           name: _OcclusionStrength

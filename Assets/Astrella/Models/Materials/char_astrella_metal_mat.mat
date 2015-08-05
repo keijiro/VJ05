@@ -64,7 +64,7 @@ Material:
       data:
         first:
           name: _Saturation
-        second: .287
+        second: 0
     m_Colors:
       data:
         first:

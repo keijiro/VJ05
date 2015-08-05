@@ -15,7 +15,7 @@ RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 6
   m_Fog: 1
-  m_FogColor: {r: .882352948, g: .882352948, b: .882352948, a: 1}
+  m_FogColor: {r: .566176474, g: .566176474, b: .566176474, a: 1}
   m_FogMode: 3
   m_FogDensity: .300000012
   m_LinearFogStart: 0
@@ -194,7 +194,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: .882352948, g: .882352948, b: .882352948, a: 1}
+  m_BackGroundColor: {r: .566176474, g: .566176474, b: .566176474, a: 1}
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
@@ -203,7 +203,7 @@ Camera:
     height: 1
   near clip plane: .300000012
   far clip plane: 100
-  field of view: 37
+  field of view: 28
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -213,7 +213,6 @@ Camera:
   m_RenderingPath: 3
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
-  m_TargetEye: 3
   m_HDR: 1
   m_OcclusionCulling: 0
   m_StereoConvergence: 10
@@ -226,7 +225,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 873665399}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -2}
+  m_LocalPosition: {x: 0, y: .0500000007, z: -2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1823232112}
@@ -290,7 +289,7 @@ MonoBehaviour:
   visualize: 0
   nearBlur: 1
   sampleCount: 1
-  sampleDist: 1.5
+  sampleDist: 1.29999995
 --- !u!114 &873665408
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -302,7 +301,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e11ef96a8174459fa3d231009ff28f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _lateralShift: .298999995
+  _lateralShift: .870000005
   _axialStrength: 1
   _axialShift: .787
   _axialQuality: 1
@@ -319,7 +318,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mode: 0
-  intensity: 4
+  intensity: 4.82999992
   chromaticAberration: 0
   axialAberration: .5
   blur: 0
@@ -360,7 +359,7 @@ MonoBehaviour:
   _colorTint: -.0700000003
   _toneMapping: 1
   _exposure: .720000029
-  _saturation: 1.01999998
+  _saturation: .519999981
   _rCurve:
     serializedVersion: 2
     m_Curve:
@@ -452,7 +451,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _maxParticles: 24000
   _emitterCenter: {x: 0, y: 0, z: 0}
-  _emitterSize: {x: 5, y: .300000012, z: 5}
+  _emitterSize: {x: 5, y: .100000001, z: 5}
   _throttle: 1
   _minLife: 1
   _maxLife: 4
@@ -471,11 +470,11 @@ MonoBehaviour:
   - {fileID: 4300002, guid: d156dcf56f86f404393203fbed35c031, type: 3}
   - {fileID: 4300000, guid: d156dcf56f86f404393203fbed35c031, type: 3}
   _minScale: .320718706
-  _maxScale: .458385199
+  _maxScale: .400000006
   _material: {fileID: 2100000, guid: 08b11f9fafba144d88c0bb77d240f827, type: 2}
   _castShadows: 0
   _receiveShadows: 0
-  _randomSeed: 0
+  _randomSeed: 29
   _debug: 0
   _defaultMaterial: {fileID: 2100000, guid: e1aad33bf16194534a7c99e7c01a8249, type: 2}
   _kernelShader: {fileID: 4800000, guid: 5e5e161a3708e40119404232637809fc, type: 3}
@@ -542,7 +541,7 @@ MonoBehaviour:
   _material: {fileID: 2100000, guid: f13c422a950eb354c9f56b5b9ff28af9, type: 2}
   _castShadows: 0
   _receiveShadows: 0
-  _randomSeed: 14
+  _randomSeed: 16
   _debug: 0
   _defaultMaterial: {fileID: 2100000, guid: e1aad33bf16194534a7c99e7c01a8249, type: 2}
   _kernelShader: {fileID: 4800000, guid: 5e5e161a3708e40119404232637809fc, type: 3}
@@ -663,7 +662,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 70f78be1e034af54790b7297093153f7, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 100312, guid: 70f78be1e034af54790b7297093153f7, type: 3}
       propertyPath: m_IsActive
